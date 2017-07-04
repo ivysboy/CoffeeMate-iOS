@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06F4AE551F0A9CEF00600440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE541F0A9CEF00600440 /* main.m */; };
+		06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE571F0A9CEF00600440 /* AppDelegate.m */; };
+		06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */; };
+		06F4AE781F0AA47F00600440 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE771F0AA47F00600440 /* CMHomeViewController.m */; };
+		06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */; };
+		06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */; };
+		06F4AE811F0AA4C100600440 /* CMUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE801F0AA4C100600440 /* CMUserCenterViewController.m */; };
+		06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE841F0AA51300600440 /* CMTabBarController.m */; };
+		06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE891F0AB5BF00600440 /* CMBasicDataManager.m */; };
+		06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE8C1F0AB69400600440 /* CMJSONResponseSerializer.m */; };
+		E1443995109E8B01F7763AF8 /* libPods-CoffeeMate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3D92CE3309A38A8686112C /* libPods-CoffeeMate.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06F4AE501F0A9CEF00600440 /* CoffeeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F4AE541F0A9CEF00600440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06F4AE561F0A9CEF00600440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06F4AE571F0A9CEF00600440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F4AE641F0A9CEF00600440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F4AE761F0AA47F00600440 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
+		06F4AE771F0AA47F00600440 /* CMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewController.m; sourceTree = "<group>"; };
+		06F4AE791F0AA4A300600440 /* CMVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoListViewController.h; sourceTree = "<group>"; };
+		06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoListViewController.m; sourceTree = "<group>"; };
+		06F4AE7C1F0AA4B300600440 /* CMDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDiscoveryViewController.h; sourceTree = "<group>"; };
+		06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDiscoveryViewController.m; sourceTree = "<group>"; };
+		06F4AE7F1F0AA4C100600440 /* CMUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUserCenterViewController.h; sourceTree = "<group>"; };
+		06F4AE801F0AA4C100600440 /* CMUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUserCenterViewController.m; sourceTree = "<group>"; };
+		06F4AE831F0AA51300600440 /* CMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTabBarController.h; sourceTree = "<group>"; };
+		06F4AE841F0AA51300600440 /* CMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTabBarController.m; sourceTree = "<group>"; };
+		06F4AE871F0AB46500600440 /* CMBasicDataManagerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBasicDataManagerInterface.h; sourceTree = "<group>"; };
+		06F4AE881F0AB5BF00600440 /* CMBasicDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicDataManager.h; sourceTree = "<group>"; };
+		06F4AE891F0AB5BF00600440 /* CMBasicDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicDataManager.m; sourceTree = "<group>"; };
+		06F4AE8B1F0AB69400600440 /* CMJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMJSONResponseSerializer.h; sourceTree = "<group>"; };
+		06F4AE8C1F0AB69400600440 /* CMJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMJSONResponseSerializer.m; sourceTree = "<group>"; };
+		6C3D92CE3309A38A8686112C /* libPods-CoffeeMate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeMate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36D84522C4F34B472337D63 /* Pods-CoffeeMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate.release.xcconfig"; sourceTree = "<group>"; };
+		E71348E965821AB9C12B654C /* Pods-CoffeeMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06F4AE4D1F0A9CEF00600440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1443995109E8B01F7763AF8 /* libPods-CoffeeMate.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06F4AE471F0A9CEF00600440 = {
+			isa = PBXGroup;
+			children = (
+				06F4AE521F0A9CEF00600440 /* CoffeeMate */,
+				06F4AE511F0A9CEF00600440 /* Products */,
+				AD9F5A268E358488FB74F2FD /* Pods */,
+				0813907879EB7689F0A1551B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06F4AE511F0A9CEF00600440 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE501F0A9CEF00600440 /* CoffeeMate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F4AE521F0A9CEF00600440 /* CoffeeMate */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE711F0AA45C00600440 /* Modules */,
+				06F4AE701F0AA45400600440 /* BaseComponent */,
+				06F4AE561F0A9CEF00600440 /* AppDelegate.h */,
+				06F4AE571F0A9CEF00600440 /* AppDelegate.m */,
+				06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */,
+				06F4AE641F0A9CEF00600440 /* Info.plist */,
+				06F4AE531F0A9CEF00600440 /* Supporting Files */,
+			);
+			path = CoffeeMate;
+			sourceTree = "<group>";
+		};
+		06F4AE531F0A9CEF00600440 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE541F0A9CEF00600440 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06F4AE701F0AA45400600440 /* BaseComponent */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE861F0AB3C600600440 /* Infrastructure */,
+				06F4AE821F0AA4F800600440 /* CMTabBar */,
+			);
+			path = BaseComponent;
+			sourceTree = "<group>";
+		};
+		06F4AE711F0AA45C00600440 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE721F0AA45C00600440 /* Discovery */,
+				06F4AE731F0AA45C00600440 /* Home */,
+				06F4AE741F0AA45C00600440 /* User */,
+				06F4AE751F0AA45C00600440 /* Video */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		06F4AE721F0AA45C00600440 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE7C1F0AA4B300600440 /* CMDiscoveryViewController.h */,
+				06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		06F4AE731F0AA45C00600440 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE761F0AA47F00600440 /* CMHomeViewController.h */,
+				06F4AE771F0AA47F00600440 /* CMHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		06F4AE741F0AA45C00600440 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE7F1F0AA4C100600440 /* CMUserCenterViewController.h */,
+				06F4AE801F0AA4C100600440 /* CMUserCenterViewController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		06F4AE751F0AA45C00600440 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE791F0AA4A300600440 /* CMVideoListViewController.h */,
+				06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		06F4AE821F0AA4F800600440 /* CMTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE831F0AA51300600440 /* CMTabBarController.h */,
+				06F4AE841F0AA51300600440 /* CMTabBarController.m */,
+			);
+			path = CMTabBar;
+			sourceTree = "<group>";
+		};
+		06F4AE861F0AB3C600600440 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				06F4AE871F0AB46500600440 /* CMBasicDataManagerInterface.h */,
+				06F4AE881F0AB5BF00600440 /* CMBasicDataManager.h */,
+				06F4AE891F0AB5BF00600440 /* CMBasicDataManager.m */,
+				06F4AE8B1F0AB69400600440 /* CMJSONResponseSerializer.h */,
+				06F4AE8C1F0AB69400600440 /* CMJSONResponseSerializer.m */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		0813907879EB7689F0A1551B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C3D92CE3309A38A8686112C /* libPods-CoffeeMate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD9F5A268E358488FB74F2FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E71348E965821AB9C12B654C /* Pods-CoffeeMate.debug.xcconfig */,
+				C36D84522C4F34B472337D63 /* Pods-CoffeeMate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F4AE4F1F0A9CEF00600440 /* CoffeeMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F4AE671F0A9CEF00600440 /* Build configuration list for PBXNativeTarget "CoffeeMate" */;
+			buildPhases = (
+				831FD900DC6C36F8F362EAEA /* [CP] Check Pods Manifest.lock */,
+				06F4AE4C1F0A9CEF00600440 /* Sources */,
+				06F4AE4D1F0A9CEF00600440 /* Frameworks */,
+				06F4AE4E1F0A9CEF00600440 /* Resources */,
+				43C86C9C3B212E75F1BF6067 /* [CP] Embed Pods Frameworks */,
+				1FC3CDF6CF1D37A39C23BB0C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeMate;
+			productName = CoffeeMate;
+			productReference = 06F4AE501F0A9CEF00600440 /* CoffeeMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06F4AE481F0A9CEF00600440 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CM;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = wuyuan;
+				TargetAttributes = {
+					06F4AE4F1F0A9CEF00600440 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = G5XEK2D5DX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 06F4AE4B1F0A9CEF00600440 /* Build configuration list for PBXProject "CoffeeMate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06F4AE471F0A9CEF00600440;
+			productRefGroup = 06F4AE511F0A9CEF00600440 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06F4AE4F1F0A9CEF00600440 /* CoffeeMate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06F4AE4E1F0A9CEF00600440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FC3CDF6CF1D37A39C23BB0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43C86C9C3B212E75F1BF6067 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		831FD900DC6C36F8F362EAEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06F4AE4C1F0A9CEF00600440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */,
+				06F4AE811F0AA4C100600440 /* CMUserCenterViewController.m in Sources */,
+				06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */,
+				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
+				06F4AE781F0AA47F00600440 /* CMHomeViewController.m in Sources */,
+				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
+				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
+				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
+				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		06F4AE651F0A9CEF00600440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06F4AE661F0A9CEF00600440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06F4AE681F0A9CEF00600440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E71348E965821AB9C12B654C /* Pods-CoffeeMate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				INFOPLIST_FILE = CoffeeMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06F4AE691F0A9CEF00600440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C36D84522C4F34B472337D63 /* Pods-CoffeeMate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				INFOPLIST_FILE = CoffeeMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06F4AE4B1F0A9CEF00600440 /* Build configuration list for PBXProject "CoffeeMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F4AE651F0A9CEF00600440 /* Debug */,
+				06F4AE661F0A9CEF00600440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F4AE671F0A9CEF00600440 /* Build configuration list for PBXNativeTarget "CoffeeMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F4AE681F0A9CEF00600440 /* Debug */,
+				06F4AE691F0A9CEF00600440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06F4AE481F0A9CEF00600440 /* Project object */;
+}
