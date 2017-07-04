@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */; };
+		067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BD1F0C01C3002212D3 /* CMBasicViewController.m */; };
+		067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */; };
 		06F4AE551F0A9CEF00600440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE541F0A9CEF00600440 /* main.m */; };
 		06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE571F0A9CEF00600440 /* AppDelegate.m */; };
 		06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */; };
@@ -21,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		067276B91F0C01A5002212D3 /* CMBasicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicListViewController.h; sourceTree = "<group>"; };
+		067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicListViewController.m; sourceTree = "<group>"; };
+		067276BC1F0C01C3002212D3 /* CMBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicViewController.h; sourceTree = "<group>"; };
+		067276BD1F0C01C3002212D3 /* CMBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicViewController.m; sourceTree = "<group>"; };
+		067276BF1F0C01E9002212D3 /* CMBasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicCollectionViewController.h; sourceTree = "<group>"; };
+		067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicCollectionViewController.m; sourceTree = "<group>"; };
 		06F4AE501F0A9CEF00600440 /* CoffeeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4AE541F0A9CEF00600440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4AE561F0A9CEF00600440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		067276B81F0C0153002212D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				067276BC1F0C01C3002212D3 /* CMBasicViewController.h */,
+				067276BD1F0C01C3002212D3 /* CMBasicViewController.m */,
+				067276B91F0C01A5002212D3 /* CMBasicListViewController.h */,
+				067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */,
+				067276BF1F0C01E9002212D3 /* CMBasicCollectionViewController.h */,
+				067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		06F4AE471F0A9CEF00600440 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,7 @@
 		06F4AE701F0AA45400600440 /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				067276B81F0C0153002212D3 /* Controller */,
 				06F4AE861F0AB3C600600440 /* Infrastructure */,
 				06F4AE821F0AA4F800600440 /* CMTabBar */,
 			);
@@ -321,9 +344,12 @@
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
 				06F4AE781F0AA47F00600440 /* CMHomeViewController.m in Sources */,
 				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
+				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
+				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
+				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

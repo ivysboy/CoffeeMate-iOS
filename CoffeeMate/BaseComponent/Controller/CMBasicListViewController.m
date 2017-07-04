@@ -1,21 +1,18 @@
 //
-//  CMHomeViewController.m
+//  CMBasicListViewController.m
 //  CoffeeMate
 //
-//  Created by 徐悟源 on 2017/7/4.
+//  Created by 徐悟源 on 2017/7/5.
 //  Copyright © 2017年 wuyuan. All rights reserved.
 //
 
-#import "CMHomeViewController.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "CMBasicListViewController.h"
 
-@interface CMHomeViewController ()
-
-@property (nonatomic , strong) UITableView *tableView;
+@interface CMBasicListViewController ()
 
 @end
 
-@implementation CMHomeViewController
+@implementation CMBasicListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
