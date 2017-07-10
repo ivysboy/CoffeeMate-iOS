@@ -10,10 +10,11 @@
 		067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */; };
 		067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BD1F0C01C3002212D3 /* CMBasicViewController.m */; };
 		067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */; };
+		067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C82971F0D5638002B5B54 /* CMHomeViewController.m */; };
+		067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */; };
 		06F4AE551F0A9CEF00600440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE541F0A9CEF00600440 /* main.m */; };
 		06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE571F0A9CEF00600440 /* AppDelegate.m */; };
 		06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */; };
-		06F4AE781F0AA47F00600440 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE771F0AA47F00600440 /* CMHomeViewController.m */; };
 		06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */; };
 		06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */; };
 		06F4AE811F0AA4C100600440 /* CMUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE801F0AA4C100600440 /* CMUserCenterViewController.m */; };
@@ -30,14 +31,16 @@
 		067276BD1F0C01C3002212D3 /* CMBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicViewController.m; sourceTree = "<group>"; };
 		067276BF1F0C01E9002212D3 /* CMBasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicCollectionViewController.h; sourceTree = "<group>"; };
 		067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicCollectionViewController.m; sourceTree = "<group>"; };
+		067C82971F0D5638002B5B54 /* CMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewController.m; sourceTree = "<group>"; };
+		067C82981F0D5638002B5B54 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
+		067C829A1F0D5650002B5B54 /* CMHomeCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeCycleView.h; sourceTree = "<group>"; };
+		067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeCycleView.m; sourceTree = "<group>"; };
 		06F4AE501F0A9CEF00600440 /* CoffeeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4AE541F0A9CEF00600440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4AE561F0A9CEF00600440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06F4AE571F0A9CEF00600440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F4AE641F0A9CEF00600440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06F4AE761F0AA47F00600440 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
-		06F4AE771F0AA47F00600440 /* CMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewController.m; sourceTree = "<group>"; };
 		06F4AE791F0AA4A300600440 /* CMVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoListViewController.h; sourceTree = "<group>"; };
 		06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoListViewController.m; sourceTree = "<group>"; };
 		06F4AE7C1F0AA4B300600440 /* CMDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDiscoveryViewController.h; sourceTree = "<group>"; };
@@ -79,6 +82,17 @@
 				067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		067C82961F0D5625002B5B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				067C82971F0D5638002B5B54 /* CMHomeViewController.m */,
+				067C82981F0D5638002B5B54 /* CMHomeViewController.h */,
+				067C829A1F0D5650002B5B54 /* CMHomeCycleView.h */,
+				067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		06F4AE471F0A9CEF00600440 = {
@@ -154,8 +168,7 @@
 		06F4AE731F0AA45C00600440 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				06F4AE761F0AA47F00600440 /* CMHomeViewController.h */,
-				06F4AE771F0AA47F00600440 /* CMHomeViewController.m */,
+				067C82961F0D5625002B5B54 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -342,12 +355,13 @@
 				06F4AE811F0AA4C100600440 /* CMUserCenterViewController.m in Sources */,
 				06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */,
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
-				06F4AE781F0AA47F00600440 /* CMHomeViewController.m in Sources */,
 				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
+				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
 				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
 				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
+				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
 			);

@@ -13,5 +13,6 @@ pod 'FLEX', '~> 2.0'
 pod 'Masonry'
 pod 'FMDB'
 pod 'LKDBHelper'
+pod 'SDCycleScrollView'
 
 end
