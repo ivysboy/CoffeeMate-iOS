@@ -1,0 +1,16 @@
+//
+//  coffeemate.pch
+//  CoffeeMate
+//
+//  Created by 徐悟源 on 2017/7/23.
+//  Copyright © 2017年 wuyuan. All rights reserved.
+//
+
+#ifndef coffeemate_pch
+#define coffeemate_pch
+
+#import "CMAPI.h"
+
+#define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
+
+#endif /* coffeemate_pch */

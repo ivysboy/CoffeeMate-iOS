@@ -38,6 +38,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - UIImage+ImageWithColor (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - ReactiveCocoa (= 2.5)
   - SDCycleScrollView
   - SDWebImage
+  - UIImage+ImageWithColor
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -64,7 +66,8 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UIImage+ImageWithColor: 891401f732f2f332fefe68c2332c6c955c2a879c
 
-PODFILE CHECKSUM: 277c90f85cc084628b52127f4287089f8edfdfaa
+PODFILE CHECKSUM: 9537bec38067bb7ef30c8751ac4efe6a6ca12682
 
 COCOAPODS: 1.2.1

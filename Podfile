@@ -14,5 +14,6 @@ pod 'Masonry'
 pod 'FMDB'
 pod 'LKDBHelper'
 pod 'SDCycleScrollView'
+pod 'UIImage+ImageWithColor'
 
 end

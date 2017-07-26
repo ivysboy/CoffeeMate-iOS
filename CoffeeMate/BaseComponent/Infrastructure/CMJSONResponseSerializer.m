@@ -8,8 +8,8 @@
 
 #import "CMJSONResponseSerializer.h"
 NSString *const kBussinessErrorDomain = @"com.wuyuan.network.response.json.serializer";
-NSString *const kResultCode = @"resultCode";
-NSString *const kMsg = @"msg";
+NSString *const kResultCode = @"code";
+NSString *const kMsg = @"message";
 NSString *const kData = @"data";
 
 @implementation CMJSONResponseSerializer
@@ -29,7 +29,7 @@ NSString *const kData = @"data";
     }
     NSInteger resultCode = [((NSDictionary *)dictionary)[kResultCode] integerValue];
     NSString *msg = ((NSDictionary *)dictionary)[kMsg];
-    if (resultCode != 200 ) {
+    if (resultCode != 1000200 ) {
         NSError *vError = [NSError errorWithDomain:kBussinessErrorDomain code:resultCode userInfo:@{kMsg : msg ? : @"unknown"}];
         
         *error = vError;

@@ -12,6 +12,12 @@
 		067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */; };
 		067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C82971F0D5638002B5B54 /* CMHomeViewController.m */; };
 		067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */; };
+		06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */; };
+		06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */; };
+		06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BED1F241E6700B1DC7F /* CMAPI.m */; };
+		06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BF21F24283900B1DC7F /* CMHomeArticleCell.m */; };
+		06D77BF71F242B6600B1DC7F /* CMHomeArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */; };
+		06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */; };
 		06F4AE551F0A9CEF00600440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE541F0A9CEF00600440 /* main.m */; };
 		06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE571F0A9CEF00600440 /* AppDelegate.m */; };
 		06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */; };
@@ -35,6 +41,18 @@
 		067C82981F0D5638002B5B54 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
 		067C829A1F0D5650002B5B54 /* CMHomeCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeCycleView.h; sourceTree = "<group>"; };
 		067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeCycleView.m; sourceTree = "<group>"; };
+		06D77BE41F241B8100B1DC7F /* CMHomeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeDataManager.h; sourceTree = "<group>"; };
+		06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeDataManager.m; sourceTree = "<group>"; };
+		06D77BE81F241C1400B1DC7F /* CMHomeArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeArticle.h; sourceTree = "<group>"; };
+		06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeArticle.m; sourceTree = "<group>"; };
+		06D77BEC1F241E6700B1DC7F /* CMAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAPI.h; sourceTree = "<group>"; };
+		06D77BED1F241E6700B1DC7F /* CMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAPI.m; sourceTree = "<group>"; };
+		06D77BF01F241F5E00B1DC7F /* coffeemate.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coffeemate.pch; sourceTree = "<group>"; };
+		06D77BF11F24283900B1DC7F /* CMHomeArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeArticleCell.h; sourceTree = "<group>"; };
+		06D77BF21F24283900B1DC7F /* CMHomeArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeArticleCell.m; sourceTree = "<group>"; };
+		06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHomeArticleCell.xib; sourceTree = "<group>"; };
+		06D77BF81F243DE600B1DC7F /* CMArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMArticleContentViewController.h; sourceTree = "<group>"; };
+		06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArticleContentViewController.m; sourceTree = "<group>"; };
 		06F4AE501F0A9CEF00600440 /* CoffeeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4AE541F0A9CEF00600440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4AE561F0A9CEF00600440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,8 +109,40 @@
 				067C82981F0D5638002B5B54 /* CMHomeViewController.h */,
 				067C829A1F0D5650002B5B54 /* CMHomeCycleView.h */,
 				067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */,
+				06D77BF11F24283900B1DC7F /* CMHomeArticleCell.h */,
+				06D77BF21F24283900B1DC7F /* CMHomeArticleCell.m */,
+				06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */,
+				06D77BF81F243DE600B1DC7F /* CMArticleContentViewController.h */,
+				06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06D77BE31F241B6B00B1DC7F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				06D77BE41F241B8100B1DC7F /* CMHomeDataManager.h */,
+				06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		06D77BE71F241BAF00B1DC7F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				06D77BE81F241C1400B1DC7F /* CMHomeArticle.h */,
+				06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		06D77BEB1F241E5900B1DC7F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				06D77BEC1F241E6700B1DC7F /* CMAPI.h */,
+				06D77BED1F241E6700B1DC7F /* CMAPI.m */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		06F4AE471F0A9CEF00600440 = {
@@ -138,6 +188,8 @@
 		06F4AE701F0AA45400600440 /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				06D77BF01F241F5E00B1DC7F /* coffeemate.pch */,
+				06D77BEB1F241E5900B1DC7F /* Constant */,
 				067276B81F0C0153002212D3 /* Controller */,
 				06F4AE861F0AB3C600600440 /* Infrastructure */,
 				06F4AE821F0AA4F800600440 /* CMTabBar */,
@@ -168,6 +220,8 @@
 		06F4AE731F0AA45C00600440 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				06D77BE71F241BAF00B1DC7F /* Module */,
+				06D77BE31F241B6B00B1DC7F /* DataManager */,
 				067C82961F0D5625002B5B54 /* View */,
 			);
 			path = Home;
@@ -293,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */,
+				06D77BF71F242B6600B1DC7F /* CMHomeArticleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +412,17 @@
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
 				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
 				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
+				06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */,
 				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
 				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
+				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
+				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
 				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
+				06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
+				06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */,
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,8 +527,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -481,8 +543,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
