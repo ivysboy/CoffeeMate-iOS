@@ -15,6 +15,8 @@
 #import "MJRefresh.h"
 #import "CMArticleContentViewController.h"
 
+#import "CMHomeRecommendCell.h"
+
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
 
 @interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -83,7 +85,9 @@
     [_tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CMHomeArticleCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CMHomeArticleCell class])];
+    _tableView.backgroundColor = [UIColor viewBackgroundColor];
+//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CMHomeArticleCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CMHomeArticleCell class])];
+    [_tableView registerClass:[CMHomeRecommendCell class] forCellReuseIdentifier:NSStringFromClass([CMHomeRecommendCell class])];
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
     [self.view addSubview:_tableView];
@@ -107,23 +111,21 @@
 
 #pragma mark - UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.articles count];
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CMHomeArticleCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CMHomeArticleCell class]) forIndexPath:indexPath];
 
-    
-    
-    
-    CMHomeArticle *article = self.articles[indexPath.row];
-    [cell configCellWith:article.name brief:article.brief image:article.image];
+    CMHomeRecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CMHomeRecommendCell class]) forIndexPath:indexPath];
+
+    [cell configCellWith:self.articles];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 120;
+    return RecommendCellHeight;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CMArticleContentViewController *contentController = [[CMArticleContentViewController alloc] init];

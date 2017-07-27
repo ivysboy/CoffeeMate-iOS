@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		060A516D1F2977BB007A4D96 /* CMHomeRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A516C1F2977BB007A4D96 /* CMHomeRecommendCell.m */; };
 		060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A516F1F29784F007A4D96 /* CMRecommendInternalCell.m */; };
+		060A51731F298A57007A4D96 /* CMRecommendCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51721F298A57007A4D96 /* CMRecommendCellHeader.m */; };
+		060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */; };
 		062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59051F2902F100368FC8 /* UIColor+CMColor.m */; };
 		062C59091F29034400368FC8 /* UIColor+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59081F29034400368FC8 /* UIColor+util.m */; };
 		067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */; };
@@ -39,6 +41,10 @@
 		060A516C1F2977BB007A4D96 /* CMHomeRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeRecommendCell.m; sourceTree = "<group>"; };
 		060A516E1F29784F007A4D96 /* CMRecommendInternalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRecommendInternalCell.h; sourceTree = "<group>"; };
 		060A516F1F29784F007A4D96 /* CMRecommendInternalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRecommendInternalCell.m; sourceTree = "<group>"; };
+		060A51711F298A57007A4D96 /* CMRecommendCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRecommendCellHeader.h; sourceTree = "<group>"; };
+		060A51721F298A57007A4D96 /* CMRecommendCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRecommendCellHeader.m; sourceTree = "<group>"; };
+		060A51741F2993C4007A4D96 /* UILabel+CMLabelAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CMLabelAlignment.h"; sourceTree = "<group>"; };
+		060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CMLabelAlignment.m"; sourceTree = "<group>"; };
 		062C59041F2902F100368FC8 /* UIColor+CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CMColor.h"; sourceTree = "<group>"; };
 		062C59051F2902F100368FC8 /* UIColor+CMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CMColor.m"; sourceTree = "<group>"; };
 		062C59071F29034400368FC8 /* UIColor+util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+util.h"; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 				060A516C1F2977BB007A4D96 /* CMHomeRecommendCell.m */,
 				060A516E1F29784F007A4D96 /* CMRecommendInternalCell.h */,
 				060A516F1F29784F007A4D96 /* CMRecommendInternalCell.m */,
+				060A51711F298A57007A4D96 /* CMRecommendCellHeader.h */,
+				060A51721F298A57007A4D96 /* CMRecommendCellHeader.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -119,6 +127,8 @@
 				062C59051F2902F100368FC8 /* UIColor+CMColor.m */,
 				062C59071F29034400368FC8 /* UIColor+util.h */,
 				062C59081F29034400368FC8 /* UIColor+util.m */,
+				060A51741F2993C4007A4D96 /* UILabel+CMLabelAlignment.h */,
+				060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -455,10 +465,12 @@
 				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
+				060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */,
 				062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */,
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
 				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
 				06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */,
+				060A51731F298A57007A4D96 /* CMRecommendCellHeader.m in Sources */,
 				060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
 				06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */,

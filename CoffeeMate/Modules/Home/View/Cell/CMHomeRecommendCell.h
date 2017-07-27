@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CMHomeArticle;
 
 @interface CMHomeRecommendCell : UITableViewCell
-
+- (void)configCellWith:(NSArray <CMHomeArticle *> *)articles;
 @end

@@ -10,4 +10,9 @@
 
 @interface CMRecommendInternalCell : UICollectionViewCell
 
+- (void)configCellWith:(NSURL *)imageUrl
+                  name:(NSString *)name
+                 title:(NSString *)title
+                 brief:(NSString *)brief;
+
 @end

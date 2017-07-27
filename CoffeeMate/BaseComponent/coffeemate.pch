@@ -9,6 +9,9 @@
 #ifndef coffeemate_pch
 #define coffeemate_pch
 
+#define RecommendCellHeight ScreenSize.width * 300.0 /375
+#define RecommendCellWidth 180
+
 #import "CMAPI.h"
 #import "UIColor+CMColor.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
