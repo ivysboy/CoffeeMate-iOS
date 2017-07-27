@@ -31,4 +31,20 @@
     }];
 }
 
+- (void)fetchArticleWithParameter:(NSDictionary *)parameters success:(void (^)(id data))success failure:(void (^)(NSError *error))failure {
+    [self GET:CMArticleContentAPI parameters:parameters success:^(id  _Nonnull data) {
+        NSError *error;
+        CMHomeArticle *article = [MTLJSONAdapter modelOfClass:[CMHomeArticle class] fromJSONDictionary:data error:&error];
+        
+        if(error) {
+            failure(error);
+        } else {
+            success(article);
+        }
+        
+    } fail:^(NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
 @end

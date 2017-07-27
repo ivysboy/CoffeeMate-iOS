@@ -10,6 +10,7 @@
 #define coffeemate_pch
 
 #import "CMAPI.h"
+#import "UIColor+CMColor.h"
 
 #define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
 

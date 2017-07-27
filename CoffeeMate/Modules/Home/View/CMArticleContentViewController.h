@@ -10,4 +10,6 @@
 
 @interface CMArticleContentViewController : UIViewController
 
+@property (nonatomic , copy) NSString *articleId;
+
 @end

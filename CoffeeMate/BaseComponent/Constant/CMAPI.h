@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString * const CMHomeArticlesListAPI;
+extern NSString * const CMArticleContentAPI;

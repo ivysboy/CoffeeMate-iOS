@@ -28,7 +28,7 @@
 
 - (void)configCellWith:(NSString *)title brief:(NSString *)brief image:(NSURL *)image {
     
-    [_image setImage:[UIImage imageWithColor:[UIColor whiteColor]]];
+    [_image setImage:[UIImage imageNamed:@"loading-Image"]];
     _title.text = title;
     _brief.text = brief;
     [_image setImageWithURL:image];

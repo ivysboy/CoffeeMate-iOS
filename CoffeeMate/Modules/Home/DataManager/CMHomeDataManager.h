@@ -14,4 +14,8 @@
                                 success:(void (^)(id data))success
                                 failure:(void (^)(NSError *error))failure;
 
+- (void)fetchArticleWithParameter:(NSDictionary *)parameters
+                          success:(void (^)(id data))success
+                          failure:(void (^)(NSError *error))failure;
+
 @end

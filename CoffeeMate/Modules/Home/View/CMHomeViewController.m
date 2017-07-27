@@ -13,6 +13,7 @@
 #import "CMHomeArticle.h"
 #import "CMHomeArticleCell.h"
 #import "MJRefresh.h"
+#import "CMArticleContentViewController.h"
 
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
 
@@ -122,6 +123,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 120;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CMArticleContentViewController *contentController = [[CMArticleContentViewController alloc] init];
+    CMHomeArticle *item = self.articles[indexPath.row];
+    contentController.articleId = item.articleId;
+    [self.navigationController pushViewController:contentController animated:YES];
 }
 
 #pragma mark - data request

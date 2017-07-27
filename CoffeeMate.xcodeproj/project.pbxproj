@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59051F2902F100368FC8 /* UIColor+CMColor.m */; };
+		062C59091F29034400368FC8 /* UIColor+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59081F29034400368FC8 /* UIColor+util.m */; };
 		067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */; };
 		067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BD1F0C01C3002212D3 /* CMBasicViewController.m */; };
 		067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062C59041F2902F100368FC8 /* UIColor+CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CMColor.h"; sourceTree = "<group>"; };
+		062C59051F2902F100368FC8 /* UIColor+CMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CMColor.m"; sourceTree = "<group>"; };
+		062C59071F29034400368FC8 /* UIColor+util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+util.h"; sourceTree = "<group>"; };
+		062C59081F29034400368FC8 /* UIColor+util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+util.m"; sourceTree = "<group>"; };
 		067276B91F0C01A5002212D3 /* CMBasicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicListViewController.h; sourceTree = "<group>"; };
 		067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBasicListViewController.m; sourceTree = "<group>"; };
 		067276BC1F0C01C3002212D3 /* CMBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBasicViewController.h; sourceTree = "<group>"; };
@@ -47,7 +53,7 @@
 		06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeArticle.m; sourceTree = "<group>"; };
 		06D77BEC1F241E6700B1DC7F /* CMAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAPI.h; sourceTree = "<group>"; };
 		06D77BED1F241E6700B1DC7F /* CMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAPI.m; sourceTree = "<group>"; };
-		06D77BF01F241F5E00B1DC7F /* coffeemate.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coffeemate.pch; sourceTree = "<group>"; };
+		06D77BF01F241F5E00B1DC7F /* coffeemate.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = coffeemate.pch; path = BaseComponent/coffeemate.pch; sourceTree = "<group>"; };
 		06D77BF11F24283900B1DC7F /* CMHomeArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeArticleCell.h; sourceTree = "<group>"; };
 		06D77BF21F24283900B1DC7F /* CMHomeArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeArticleCell.m; sourceTree = "<group>"; };
 		06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHomeArticleCell.xib; sourceTree = "<group>"; };
@@ -89,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062C59031F2902CA00368FC8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				062C59041F2902F100368FC8 /* UIColor+CMColor.h */,
+				062C59051F2902F100368FC8 /* UIColor+CMColor.m */,
+				062C59071F29034400368FC8 /* UIColor+util.h */,
+				062C59081F29034400368FC8 /* UIColor+util.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		067276B81F0C0153002212D3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +187,7 @@
 				06F4AE701F0AA45400600440 /* BaseComponent */,
 				06F4AE561F0A9CEF00600440 /* AppDelegate.h */,
 				06F4AE571F0A9CEF00600440 /* AppDelegate.m */,
+				06D77BF01F241F5E00B1DC7F /* coffeemate.pch */,
 				06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */,
 				06F4AE641F0A9CEF00600440 /* Info.plist */,
 				06F4AE531F0A9CEF00600440 /* Supporting Files */,
@@ -188,7 +206,7 @@
 		06F4AE701F0AA45400600440 /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
-				06D77BF01F241F5E00B1DC7F /* coffeemate.pch */,
+				062C59031F2902CA00368FC8 /* Category */,
 				06D77BEB1F241E5900B1DC7F /* Constant */,
 				067276B81F0C0153002212D3 /* Controller */,
 				06F4AE861F0AB3C600600440 /* Infrastructure */,
@@ -418,12 +436,14 @@
 				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
+				062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */,
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
 				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
 				06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
 				06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */,
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
+				062C59091F29034400368FC8 /* UIColor+util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
