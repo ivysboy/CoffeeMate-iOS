@@ -53,7 +53,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[titleImage]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[titleView(64)][titleImage]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[infoContainer]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[infoContainer(96)]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-224-[infoContainer]|" options:0 metrics:nil views:views]];
     
 }
 
@@ -86,6 +86,35 @@
 - (UIView *)setupInfoContainer {
     UIView *container = [[UIView alloc] initWithFrame:CGRectZero];
     [container setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    [title setTranslatesAutoresizingMaskIntoConstraints:NO];
+    title.font = [UIFont boldSystemFontOfSize:11];
+    title.textColor = [UIColor whiteColor];
+    title.text = @"咖啡基础知识集锦";
+    [container addSubview:title];
+    
+    UILabel *auther = [[UILabel alloc] initWithFrame:CGRectZero];
+    [auther setTranslatesAutoresizingMaskIntoConstraints:NO];
+    auther.font = [UIFont boldSystemFontOfSize:12];
+    auther.textColor = [UIColor whiteColor];
+    auther.text = @"李小宝";
+    [container addSubview:auther];
+    
+    UILabel *brief = [[UILabel alloc] initWithFrame:CGRectZero];
+    [brief setTranslatesAutoresizingMaskIntoConstraints:NO];
+    brief.font = [UIFont boldSystemFontOfSize:12];
+    brief.textColor = [UIColor whiteColor];
+    brief.text = @"李小宝制作的咖啡基础知识集锦";
+    [container addSubview:brief];
+    
+    NSDictionary *views = @{@"title" : title,
+                            @"auther" : auther,
+                            @"brief" : brief};
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[title]" options:0 metrics:nil views:views]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[auther]" options:0 metrics:nil views:views]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[brief]" options:0 metrics:nil views:views]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[title(10)]-10-[auther(10)]-10-[brief]-|" options:0 metrics:nil views:views]];
     
     return container;
 }
