@@ -8,12 +8,12 @@
 
 #import "CMRecommendInternalCell.h"
 #import "UILabel+CMLabelAlignment.h"
-
+#import "CMEdgeInsertLabel.h"
 @interface CMRecommendInternalCell()
 
 @property (nonatomic , strong) UIImageView *mainImage;
 
-@property (nonatomic , strong) UILabel *nameLabel;
+@property (nonatomic , strong) CMEdgeInsertLabel *nameLabel;
 
 @property (nonatomic , strong) UILabel *titleLabel;
 
@@ -42,10 +42,10 @@
     _mainImage.contentMode = UIViewContentModeScaleToFill;
     [self.contentView addSubview:_mainImage];
     
-    _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _nameLabel = [[CMEdgeInsertLabel alloc] initWithFrame:CGRectZero];
     [_nameLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     _nameLabel.textColor = [UIColor whiteColor];
-    _nameLabel.backgroundColor = [UIColor blueColor];
+    _nameLabel.backgroundColor = [UIColor titleBlueColor];
     _nameLabel.font = [UIFont systemFontOfSize:13];
     [self.contentView addSubview:_nameLabel];
     

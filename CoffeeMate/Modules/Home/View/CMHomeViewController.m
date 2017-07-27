@@ -14,12 +14,14 @@
 #import "CMHomeArticleCell.h"
 #import "MJRefresh.h"
 #import "CMArticleContentViewController.h"
+#import "CMHomeHeaderView.h"
 
 #import "CMHomeRecommendCell.h"
 
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
+#define HEADERHEIGHT 320
 
-@interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
 @property (nonatomic , strong) UITableView *tableView;
 
@@ -30,6 +32,8 @@
 @property (nonatomic , strong) MJRefreshNormalHeader *pullRefreshHeader;
 
 @property (nonatomic , assign) int page;
+
+@property (nonatomic , strong) UIView *titleView;
 
 @end
 
@@ -52,6 +56,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavigationBar];
     [self setupSubView];
 
     [self beginRefreshing];
@@ -80,13 +85,49 @@
     [self getArticles];
 }
 
+- (void)setupNavigationBar {
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(ScreenSize.width, 64)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+    UIButton *searchBtn = [self customViewWithImage:[UIImage imageNamed:@"icon-redact"]];
+    searchBtn.frame = CGRectMake(0, 0, 20, 20);
+    UIBarButtonItem *searchBarButton = [[UIBarButtonItem alloc] initWithCustomView:searchBtn];
+    
+    UIButton *categoryBtn = [self customViewWithImage:[UIImage imageNamed:@"icon_all-categories"]];
+    categoryBtn.frame = CGRectMake(0, 0, 20, 20);
+    [categoryBtn setBackgroundImage:[UIImage imageNamed:@"icon_all-categories"] forState:UIControlStateNormal];
+    UIBarButtonItem *categoryBarButton = [[UIBarButtonItem alloc] initWithCustomView:categoryBtn];
+    
+    UIBarButtonItem *negativeRightSpacer1 = [[UIBarButtonItem alloc]
+                                            initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                            target:nil action:nil];
+    negativeRightSpacer1.width = 5;
+    UIBarButtonItem *negativeRightSpacer2 = [[UIBarButtonItem alloc]
+                                             initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                             target:nil action:nil];
+    negativeRightSpacer2.width = 25;
+    
+    self.navigationItem.rightBarButtonItems = @[negativeRightSpacer1, searchBarButton, negativeRightSpacer2, categoryBarButton];
+    
+    UILabel *titleView = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleView.text = @"Discovery";
+    titleView.font = [UIFont boldSystemFontOfSize:13];
+    titleView.textAlignment = NSTextAlignmentCenter;
+    CGFloat titleWidth = [titleView.text boundingRectWithSize:CGSizeMake(ScreenSize.width / 3, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : titleView.font} context:nil].size.width;
+    CGSize titleSize = CGSizeMake(titleWidth + 50, 30);
+    [titleView setFrame:CGRectMake(0, 0, titleSize.width, titleSize.height)];
+    [self.navigationItem setTitleView:titleView];
+    
+    _titleView = self.navigationItem.titleView;
+    _titleView.alpha = 0.f;
+}
+
 - (void)setupSubView {
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero];
     [_tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor viewBackgroundColor];
-//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CMHomeArticleCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CMHomeArticleCell class])];
     [_tableView registerClass:[CMHomeRecommendCell class] forCellReuseIdentifier:NSStringFromClass([CMHomeRecommendCell class])];
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
@@ -99,8 +140,12 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
     
-    CMHomeCycleView *cycleView = [[CMHomeCycleView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, CYCLEVIEWHEIGHT)];
-    _tableView.tableHeaderView = cycleView;
+    
+    CMHomeHeaderView *header = [[CMHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenSize.width, HEADERHEIGHT)];
+    _tableView.tableHeaderView = header;
+//    
+//    CMHomeCycleView *cycleView = [[CMHomeCycleView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, CYCLEVIEWHEIGHT)];
+//    _tableView.tableHeaderView = cycleView;
 
 }
 
@@ -154,6 +199,50 @@
     } failure:^(NSError *error) {
         [_pullRefreshHeader endRefreshing];
     }];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self changeTitleViewAlpha:scrollView.contentOffset];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self changeTitleViewAlpha:scrollView.contentOffset];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    [self changeTitleViewAlpha:scrollView.contentOffset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self changeTitleViewAlpha:scrollView.contentOffset];
+}
+
+- (void)changeTitleViewAlpha:(CGPoint) contenOffset {
+    if(contenOffset.y > 64) {
+        _titleView.alpha = 1.0f;
+        return;
+    }
+    
+    _titleView.alpha = contenOffset.y /64;
+}
+
+- (UIButton *)customViewWithImage:(UIImage *)image {
+    UIButton *customView = [UIButton buttonWithType:UIButtonTypeCustom];
+    [customView setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    customView.exclusiveTouch = YES;
+    customView.frame = CGRectMake(0, 0, 44, 44);
+    
+    UIImage *darkImage;
+    darkImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    customView.tintColor = [UIColor darkGrayColor];
+    
+    [customView setImage:darkImage forState:UIControlStateNormal];
+    CGRect frame = customView.frame;
+    frame.size.width = image.size.width;
+    customView.frame = frame;
+    return customView;
 }
 
 

@@ -11,6 +11,11 @@
 		060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A516F1F29784F007A4D96 /* CMRecommendInternalCell.m */; };
 		060A51731F298A57007A4D96 /* CMRecommendCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51721F298A57007A4D96 /* CMRecommendCellHeader.m */; };
 		060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */; };
+		060A517A1F29AEF4007A4D96 /* CMEdgeInsertLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51791F29AEF4007A4D96 /* CMEdgeInsertLabel.m */; };
+		060A517C1F29B008007A4D96 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A517B1F29B008007A4D96 /* Foundation+Log.m */; };
+		060A517F1F29BD39007A4D96 /* CMConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A517E1F29BD39007A4D96 /* CMConstant.m */; };
+		060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51811F29CBF4007A4D96 /* UIImage+color.m */; };
+		060A51851F29D2BF007A4D96 /* CMHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A51841F29D2BF007A4D96 /* CMHomeHeaderView.m */; };
 		062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59051F2902F100368FC8 /* UIColor+CMColor.m */; };
 		062C59091F29034400368FC8 /* UIColor+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C59081F29034400368FC8 /* UIColor+util.m */; };
 		067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */; };
@@ -45,6 +50,15 @@
 		060A51721F298A57007A4D96 /* CMRecommendCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRecommendCellHeader.m; sourceTree = "<group>"; };
 		060A51741F2993C4007A4D96 /* UILabel+CMLabelAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CMLabelAlignment.h"; sourceTree = "<group>"; };
 		060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CMLabelAlignment.m"; sourceTree = "<group>"; };
+		060A51781F29AEF4007A4D96 /* CMEdgeInsertLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMEdgeInsertLabel.h; sourceTree = "<group>"; };
+		060A51791F29AEF4007A4D96 /* CMEdgeInsertLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMEdgeInsertLabel.m; sourceTree = "<group>"; };
+		060A517B1F29B008007A4D96 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		060A517D1F29BD39007A4D96 /* CMConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstant.h; sourceTree = "<group>"; };
+		060A517E1F29BD39007A4D96 /* CMConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstant.m; sourceTree = "<group>"; };
+		060A51801F29CBF4007A4D96 /* UIImage+color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+color.h"; sourceTree = "<group>"; };
+		060A51811F29CBF4007A4D96 /* UIImage+color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+color.m"; sourceTree = "<group>"; };
+		060A51831F29D2BF007A4D96 /* CMHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeHeaderView.h; sourceTree = "<group>"; };
+		060A51841F29D2BF007A4D96 /* CMHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeHeaderView.m; sourceTree = "<group>"; };
 		062C59041F2902F100368FC8 /* UIColor+CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CMColor.h"; sourceTree = "<group>"; };
 		062C59051F2902F100368FC8 /* UIColor+CMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CMColor.m"; sourceTree = "<group>"; };
 		062C59071F29034400368FC8 /* UIColor+util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+util.h"; sourceTree = "<group>"; };
@@ -120,6 +134,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		060A51771F29AEDB007A4D96 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				060A517B1F29B008007A4D96 /* Foundation+Log.m */,
+				060A51781F29AEF4007A4D96 /* CMEdgeInsertLabel.h */,
+				060A51791F29AEF4007A4D96 /* CMEdgeInsertLabel.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		062C59031F2902CA00368FC8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +153,8 @@
 				062C59081F29034400368FC8 /* UIColor+util.m */,
 				060A51741F2993C4007A4D96 /* UILabel+CMLabelAlignment.h */,
 				060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */,
+				060A51801F29CBF4007A4D96 /* UIImage+color.h */,
+				060A51811F29CBF4007A4D96 /* UIImage+color.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -159,6 +185,8 @@
 				06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */,
 				06D77BF81F243DE600B1DC7F /* CMArticleContentViewController.h */,
 				06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */,
+				060A51831F29D2BF007A4D96 /* CMHomeHeaderView.h */,
+				060A51841F29D2BF007A4D96 /* CMHomeHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +214,8 @@
 			children = (
 				06D77BEC1F241E6700B1DC7F /* CMAPI.h */,
 				06D77BED1F241E6700B1DC7F /* CMAPI.m */,
+				060A517D1F29BD39007A4D96 /* CMConstant.h */,
+				060A517E1F29BD39007A4D96 /* CMConstant.m */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -234,6 +264,7 @@
 		06F4AE701F0AA45400600440 /* BaseComponent */ = {
 			isa = PBXGroup;
 			children = (
+				060A51771F29AEDB007A4D96 /* Util */,
 				062C59031F2902CA00368FC8 /* Category */,
 				06D77BEB1F241E5900B1DC7F /* Constant */,
 				067276B81F0C0153002212D3 /* Controller */,
@@ -459,10 +490,14 @@
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
 				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
 				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
+				060A517F1F29BD39007A4D96 /* CMConstant.m in Sources */,
+				060A51851F29D2BF007A4D96 /* CMHomeHeaderView.m in Sources */,
 				06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */,
+				060A517A1F29AEF4007A4D96 /* CMEdgeInsertLabel.m in Sources */,
 				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
 				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
 				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
+				060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */,
@@ -474,6 +509,7 @@
 				060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
 				06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */,
+				060A517C1F29B008007A4D96 /* Foundation+Log.m in Sources */,
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
 				062C59091F29034400368FC8 /* UIColor+util.m in Sources */,
 			);

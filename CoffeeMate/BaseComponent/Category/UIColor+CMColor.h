@@ -12,4 +12,12 @@
 
 + (UIColor *)viewBackgroundColor;
 
++ (UIColor *)titleGreenColor;
+
++ (UIColor *)titleBlueColor;
+
++ (UIColor *)highlightedColor;
+
++ (UIColor *)darkBlueColor;
+
 @end

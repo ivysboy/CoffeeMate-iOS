@@ -50,7 +50,7 @@
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 10;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 0);
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
@@ -113,10 +113,11 @@
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(RecommendCellWidth, RecommendCellHeight-54);
+    return CGSizeMake(RecommendCellWidth, RecommendCellHeight-44);
 }
 
 - (void)configCellWith:(NSArray <CMHomeArticle *> *)articles {
+    [self.articles removeAllObjects];
     [self.articles addObjectsFromArray: articles];
     [self.collectionView reloadData];
 }

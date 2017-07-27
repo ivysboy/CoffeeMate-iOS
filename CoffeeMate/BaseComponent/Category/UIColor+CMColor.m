@@ -11,10 +11,24 @@
 
 @implementation UIColor (CMColor)
 
-+ (UIColor *)viewBackgroundColor
-{
++ (UIColor *)viewBackgroundColor {
     return [UIColor colorWithHexString:@"#f0f0f0"];
 }
 
++ (UIColor *)titleGreenColor {
+    return [UIColor colorWithRed:44/255.0 green:248/255.0 blue:151/255.0 alpha:1.0];
+}
+
++ (UIColor *)titleBlueColor {
+    return [UIColor colorWithRed:11/255.0 green:179/255.0 blue:252/255.0 alpha:1.0];
+}
+
++ (UIColor *)highlightedColor {
+    return [UIColor colorWithRed:251/255.0 green:69/255.0 blue:116/255.0 alpha:1.0];
+}
+
++ (UIColor *)darkBlueColor {
+    return [UIColor colorWithRed:4/255.0 green:50/255.0 blue:74/255.0 alpha:1.0];
+}
 
 @end

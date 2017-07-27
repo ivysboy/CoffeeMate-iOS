@@ -39,7 +39,7 @@
     [_more setTranslatesAutoresizingMaskIntoConstraints:NO];
     _more.userInteractionEnabled = YES;
     _more.text = @"more";
-    _more.textColor = [UIColor greenColor];
+    _more.textColor = [UIColor titleGreenColor];
     _more.font = [UIFont boldSystemFontOfSize:12];
     [_more addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMore)]];
     [self addSubview:_more];

@@ -13,7 +13,9 @@
 #define RecommendCellWidth 180
 
 #import "CMAPI.h"
+#import "CMConstant.h"
 #import "UIColor+CMColor.h"
+#import "UIImage+color.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 #define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
