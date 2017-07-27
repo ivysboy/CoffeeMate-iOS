@@ -11,6 +11,7 @@
 
 #import "CMAPI.h"
 #import "UIColor+CMColor.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 #define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
 
