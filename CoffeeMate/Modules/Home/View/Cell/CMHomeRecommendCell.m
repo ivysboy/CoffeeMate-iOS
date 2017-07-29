@@ -9,7 +9,7 @@
 #import "CMHomeRecommendCell.h"
 #import "CMRecommendCellHeader.h"
 #import "CMRecommendInternalCell.h"
-#import "CMHomeArticle.h"
+#import "CMHomeContentArticle.h"
 
 @interface CMHomeRecommendCell()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -80,35 +80,27 @@
     return self.articles.count;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"press %@ cell", @(indexPath.row));
-}
-
-
 #pragma mark - UICollectionDataSource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CMRecommendInternalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CMRecommendInternalCell class]) forIndexPath:indexPath];
 
-    CMHomeArticle *article = self.articles[indexPath.row];
+    CMHomeContentArticle *article = self.articles[indexPath.row];
     
-    [cell configCellWith:article.image name:article.name title:@"Your title" brief:article.brief];
+    [cell configCellWith:article.image name:article.title title:article.auther brief:article.brief];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    NSLog(@"%@",_items[indexPath.row].name);
-//    SecKillGoodItem *item = _items[indexPath.row];
-//    
-//    NSTimeInterval timeGap = [[NSDate date]timeIntervalSince1970] - _configTimeInterval;
-//    
-//    JPTimerData *timerData = [[JPTimerData alloc] initWithTimerDataWith:item.startTime > 0 ? item.startTime.longLongValue / 1000 - timeGap : 0 endTime:item.endTime > 0 ? item.endTime.longLongValue / 1000 - timeGap : 0];
-//    
-//    SecKillCell *secCell = (SecKillCell *)cell;
-//    [secCell updateTimeData:timerData];
     
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    CMHomeContentArticle *article = self.articles[indexPath.row];
+    if([_delegate respondsToSelector:@selector(handleArticleItemClick:)]) {
+        [_delegate handleArticleItemClick:article.articleId];
+    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -116,7 +108,8 @@
     return CGSizeMake(RecommendCellWidth, RecommendCellHeight-44);
 }
 
-- (void)configCellWith:(NSArray <CMHomeArticle *> *)articles {
+- (void)configCellWith:(NSArray <CMHomeContentArticle *> *)articles title:(NSString *)title {
+    [_header configWith:title more:@"more"];
     [self.articles removeAllObjects];
     [self.articles addObjectsFromArray: articles];
     [self.collectionView reloadData];

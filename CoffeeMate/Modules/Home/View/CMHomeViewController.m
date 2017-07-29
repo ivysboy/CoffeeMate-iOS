@@ -17,15 +17,19 @@
 #import "CMHomeHeaderView.h"
 
 #import "CMHomeRecommendCell.h"
+#import "CMHomeBanner.h"
+#import "CMHomeContentArticle.h"
+#import "CMHomeContent.h"
 
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
 #define HEADERHEIGHT 320
 
-@interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate,
+                                   CMHomeRecommendCellDelegate>
 
 @property (nonatomic , strong) UITableView *tableView;
 
-@property (nonatomic , strong) NSMutableArray *articles;
+@property (nonatomic , strong) NSMutableArray <CMHomeContent *>*articles;
 
 @property (nonatomic , strong) CMHomeDataManager *dataManager;
 
@@ -34,6 +38,8 @@
 @property (nonatomic , assign) int page;
 
 @property (nonatomic , strong) UIView *titleView;
+
+@property (nonatomic , strong) CMHomeHeaderView *headerView;
 
 @end
 
@@ -77,12 +83,34 @@
 - (void)beginRefreshing {
     [self.tableView.mj_footer resetNoMoreData];
     _page = 1;
-    [self getArticles];
+    [self queryHomeBanner];
+    [self queryContentList];
+}
+
+- (void)queryHomeBanner {
+    [self.dataManager fetchHomeBannerWithParameter:nil success:^(CMHomeBanner *data) {
+        [_headerView configHeaderWith:data.title auther:data.auther brief:data.brief image:data.image];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+- (void)queryContentList {
+    [self.dataManager fetchHomeContentListWithParameter:nil success:^(NSArray <CMHomeContent *> *data) {
+        if(_page == 1) {
+            [self.articles removeAllObjects];
+        }
+        [self.articles addObjectsFromArray:data];
+        [self.tableView reloadData];
+        [_pullRefreshHeader endRefreshing];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)loadNext {
-    _page++;
-    [self getArticles];
+    [self.tableView.mj_footer endRefreshingWithNoMoreData];
 }
 
 - (void)setupNavigationBar {
@@ -142,11 +170,8 @@
     
     
     CMHomeHeaderView *header = [[CMHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenSize.width, HEADERHEIGHT)];
+    _headerView = header;
     _tableView.tableHeaderView = header;
-//    
-//    CMHomeCycleView *cycleView = [[CMHomeCycleView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, CYCLEVIEWHEIGHT)];
-//    _tableView.tableHeaderView = cycleView;
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,14 +181,15 @@
 
 #pragma mark - UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.articles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     CMHomeRecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CMHomeRecommendCell class]) forIndexPath:indexPath];
-
-    [cell configCellWith:self.articles];
+    cell.delegate = self;
+    CMHomeContent *content = self.articles[indexPath.row];
+    [cell configCellWith: content.articleList title:content.title];
     return cell;
 }
 
@@ -173,33 +199,8 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CMArticleContentViewController *contentController = [[CMArticleContentViewController alloc] init];
-    CMHomeArticle *item = self.articles[indexPath.row];
-    contentController.articleId = item.articleId;
-    [self.navigationController pushViewController:contentController animated:YES];
 }
 
-#pragma mark - data request
-
-- (void)getArticles {
-    
-    NSDictionary *params = @{@"page" : @(_page) ,
-                             @"orderBy" : @"-createtime"};
-   [self.dataManager fetchArticlesListWithParameters:params success:^(NSArray *data) {
-       [_pullRefreshHeader endRefreshing];
-       if([data count] < 10) {
-           [self.tableView.mj_footer setState:MJRefreshStateNoMoreData];
-       }
-       if(_page == 1) {
-           [self.articles removeAllObjects];
-       }
-       [self.articles addObjectsFromArray:data];
-       [self.tableView reloadData];
-       
-    } failure:^(NSError *error) {
-        [_pullRefreshHeader endRefreshing];
-    }];
-}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -245,5 +246,11 @@
     return customView;
 }
 
+#pragma mark - CMHomeRecommendCellDelegate
+- (void)handleArticleItemClick:(NSString *)articleId {
+    CMArticleContentViewController *content = [[CMArticleContentViewController alloc] init];
+    content.articleId = articleId;
+    [self.navigationController pushViewController:content animated:YES];
+}
 
 @end

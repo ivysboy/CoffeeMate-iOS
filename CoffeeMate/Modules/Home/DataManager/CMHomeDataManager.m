@@ -8,6 +8,8 @@
 
 #import "CMHomeDataManager.h"
 #import "CMHomeArticle.h"
+#import "CMHomeBanner.h"
+#import "CMHomeContent.h"
 
 @implementation CMHomeDataManager
 
@@ -42,6 +44,36 @@
             success(article);
         }
         
+    } fail:^(NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+- (void)fetchHomeBannerWithParameter:(NSDictionary *)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure {
+    [self GET:CMHomeBannerAPI parameters:parameters success:^(id  _Nonnull data) {
+        NSError *error;
+        CMHomeBanner *banner = [MTLJSONAdapter modelOfClass:[CMHomeBanner class] fromJSONDictionary:data error:&error];
+        
+        if(error) {
+            failure(error);
+        } else {
+            success(banner);
+        }
+    } fail:^(NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+- (void)fetchHomeContentListWithParameter:(NSDictionary *)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure {
+    [self GET:CMHomeContentListAPI parameters:parameters success:^(id  _Nonnull data) {
+        NSError *error;
+        NSArray <CMHomeContent *> *content = [MTLJSONAdapter modelsOfClass:[CMHomeContent class] fromJSONArray:data error:&error];
+        
+        if(error) {
+            failure(error);
+        } else {
+            success(content);
+        }
     } fail:^(NSError * _Nonnull error) {
         failure(error);
     }];

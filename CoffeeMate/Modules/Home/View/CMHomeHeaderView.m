@@ -14,6 +14,9 @@
 @property (nonatomic , strong) UIView *titleView;
 @property (nonatomic , strong) UIImageView *titleImage;
 @property (nonatomic , strong) UIView *infoContainer;
+@property (nonatomic , strong) UILabel *title;
+@property (nonatomic , strong) UILabel *brief;
+@property (nonatomic , strong) UILabel *auther;
 
 @end
 
@@ -88,6 +91,7 @@
     [container setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    _title = title;
     [title setTranslatesAutoresizingMaskIntoConstraints:NO];
     title.font = [UIFont boldSystemFontOfSize:11];
     title.textColor = [UIColor whiteColor];
@@ -95,6 +99,7 @@
     [container addSubview:title];
     
     UILabel *auther = [[UILabel alloc] initWithFrame:CGRectZero];
+    _auther = auther;
     [auther setTranslatesAutoresizingMaskIntoConstraints:NO];
     auther.font = [UIFont boldSystemFontOfSize:12];
     auther.textColor = [UIColor whiteColor];
@@ -102,6 +107,7 @@
     [container addSubview:auther];
     
     UILabel *brief = [[UILabel alloc] initWithFrame:CGRectZero];
+    _brief = brief;
     [brief setTranslatesAutoresizingMaskIntoConstraints:NO];
     brief.font = [UIFont boldSystemFontOfSize:12];
     brief.textColor = [UIColor whiteColor];
@@ -118,4 +124,12 @@
     
     return container;
 }
+
+- (void)configHeaderWith:(NSString *)title auther:(NSString *)auther brief:(NSString *)brief image:(NSURL *)image {
+    [_titleImage setImageWithURL:image];
+    _title.text = title;
+    _auther.text = auther;
+    _brief.text = brief;
+}
+
 @end

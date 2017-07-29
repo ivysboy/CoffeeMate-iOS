@@ -23,6 +23,10 @@
 		067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */; };
 		067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C82971F0D5638002B5B54 /* CMHomeViewController.m */; };
 		067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */; };
+		0699E70A1F2D27E800B111CC /* CMHomeBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7091F2D27E800B111CC /* CMHomeBanner.m */; };
+		0699E70D1F2D2B0200B111CC /* CMHomeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E70C1F2D2B0200B111CC /* CMHomeContent.m */; };
+		0699E7101F2D2B9600B111CC /* CMHomeContentArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E70F1F2D2B9600B111CC /* CMHomeContentArticle.m */; };
+		0699E7131F2D32CC00B111CC /* CMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7121F2D32CC00B111CC /* CMNavigationController.m */; };
 		06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */; };
 		06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */; };
 		06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BED1F241E6700B1DC7F /* CMAPI.m */; };
@@ -73,6 +77,14 @@
 		067C82981F0D5638002B5B54 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
 		067C829A1F0D5650002B5B54 /* CMHomeCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeCycleView.h; sourceTree = "<group>"; };
 		067C829B1F0D5650002B5B54 /* CMHomeCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeCycleView.m; sourceTree = "<group>"; };
+		0699E7081F2D27E800B111CC /* CMHomeBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeBanner.h; sourceTree = "<group>"; };
+		0699E7091F2D27E800B111CC /* CMHomeBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeBanner.m; sourceTree = "<group>"; };
+		0699E70B1F2D2B0200B111CC /* CMHomeContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeContent.h; sourceTree = "<group>"; };
+		0699E70C1F2D2B0200B111CC /* CMHomeContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeContent.m; sourceTree = "<group>"; };
+		0699E70E1F2D2B9600B111CC /* CMHomeContentArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeContentArticle.h; sourceTree = "<group>"; };
+		0699E70F1F2D2B9600B111CC /* CMHomeContentArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeContentArticle.m; sourceTree = "<group>"; };
+		0699E7111F2D32CC00B111CC /* CMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMNavigationController.h; sourceTree = "<group>"; };
+		0699E7121F2D32CC00B111CC /* CMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMNavigationController.m; sourceTree = "<group>"; };
 		06D77BE41F241B8100B1DC7F /* CMHomeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeDataManager.h; sourceTree = "<group>"; };
 		06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeDataManager.m; sourceTree = "<group>"; };
 		06D77BE81F241C1400B1DC7F /* CMHomeArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeArticle.h; sourceTree = "<group>"; };
@@ -168,6 +180,8 @@
 				067276BA1F0C01A5002212D3 /* CMBasicListViewController.m */,
 				067276BF1F0C01E9002212D3 /* CMBasicCollectionViewController.h */,
 				067276C01F0C01E9002212D3 /* CMBasicCollectionViewController.m */,
+				0699E7111F2D32CC00B111CC /* CMNavigationController.h */,
+				0699E7121F2D32CC00B111CC /* CMNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +219,12 @@
 			children = (
 				06D77BE81F241C1400B1DC7F /* CMHomeArticle.h */,
 				06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */,
+				0699E7081F2D27E800B111CC /* CMHomeBanner.h */,
+				0699E7091F2D27E800B111CC /* CMHomeBanner.m */,
+				0699E70B1F2D2B0200B111CC /* CMHomeContent.h */,
+				0699E70C1F2D2B0200B111CC /* CMHomeContent.m */,
+				0699E70E1F2D2B9600B111CC /* CMHomeContentArticle.h */,
+				0699E70F1F2D2B9600B111CC /* CMHomeContentArticle.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -484,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */,
+				0699E7131F2D32CC00B111CC /* CMNavigationController.m in Sources */,
 				06F4AE811F0AA4C100600440 /* CMUserCenterViewController.m in Sources */,
 				060A516D1F2977BB007A4D96 /* CMHomeRecommendCell.m in Sources */,
 				06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */,
@@ -492,12 +513,14 @@
 				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
 				060A517F1F29BD39007A4D96 /* CMConstant.m in Sources */,
 				060A51851F29D2BF007A4D96 /* CMHomeHeaderView.m in Sources */,
+				0699E7101F2D2B9600B111CC /* CMHomeContentArticle.m in Sources */,
 				06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */,
 				060A517A1F29AEF4007A4D96 /* CMEdgeInsertLabel.m in Sources */,
 				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
 				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
 				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
 				060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */,
+				0699E70D1F2D2B0200B111CC /* CMHomeContent.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */,
@@ -505,6 +528,7 @@
 				06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */,
 				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
 				06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */,
+				0699E70A1F2D27E800B111CC /* CMHomeBanner.m in Sources */,
 				060A51731F298A57007A4D96 /* CMRecommendCellHeader.m in Sources */,
 				060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,

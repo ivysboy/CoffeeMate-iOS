@@ -10,4 +10,9 @@
 
 @interface CMHomeHeaderView : UIView
 
+- (void)configHeaderWith:(NSString *)title
+                  auther:(NSString *)auther
+                   brief:(NSString *)brief
+                   image:(NSURL *)image;
+
 @end

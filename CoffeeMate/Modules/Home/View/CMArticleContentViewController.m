@@ -77,7 +77,7 @@
     
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[mainImage]|" options:0 metrics:metrics views:views]];
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.scrollView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.mainImage attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
-    [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[content]|" options:0 metrics:metrics views:views]];
+    [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[content]-5-|" options:0 metrics:metrics views:views]];
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mainImage(240)]-60-[content]-40-|" options:0 metrics:nil views:views]];
     [self.scrollView setContentSize:CGSizeMake(ScreenSize.width, ScreenSize.height)];
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[title]-30-|" options:0 metrics:nil views:views]];
@@ -122,7 +122,7 @@
 }
 
 - (NSString *)css {
-    return @"* {font-family: Helvetica;word-break: break-all;}   p {color: #646464;} p.listitem{ padding-left:10px;}p.listitem:before { position:absolute;left:2px;}";
+    return @"* {font-family: Helvetica;word-break: break-all;}   p {color: #646464;text-indent:2em;} p.listitem{ padding-left:10px;}p.listitem:before { position:absolute;left:2px;}";
 }
 
 #pragma mark --- WebViewDelegate

@@ -18,4 +18,12 @@
                           success:(void (^)(id data))success
                           failure:(void (^)(NSError *error))failure;
 
+- (void)fetchHomeBannerWithParameter:(NSDictionary *)parameters
+                             success:(void (^)(id data))success
+                             failure:(void (^)(NSError *error))failure;
+
+- (void)fetchHomeContentListWithParameter:(NSDictionary *)parameters
+                                  success:(void (^)(id data))success
+                                  failure:(void (^)(NSError *error))failure;
+
 @end

@@ -11,6 +11,7 @@
 #import "CMVideoListViewController.h"
 #import "CMDiscoveryViewController.h"
 #import "CMUserCenterViewController.h"
+#import "CMNavigationController.h"
 
 @interface CMTabBarController ()
 
@@ -47,7 +48,7 @@
         viewController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     }
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    CMNavigationController *navigationController = [[CMNavigationController alloc] initWithRootViewController:viewController];
 
     [self addChildViewController:navigationController];
 }

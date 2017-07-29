@@ -7,8 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CMHomeArticle;
+
+NS_ASSUME_NONNULL_BEGIN
+@class CMHomeContentArticle;
+
+@protocol CMHomeRecommendCellDelegate<NSObject>
+
+@optional
+- (void)handleArticleItemClick:(NSString *)articleId;
+
+@end
 
 @interface CMHomeRecommendCell : UITableViewCell
-- (void)configCellWith:(NSArray <CMHomeArticle *> *)articles;
+
+@property (nonatomic , weak) id<CMHomeRecommendCellDelegate> delegate;
+
+- (void)configCellWith:(NSArray <CMHomeContentArticle *> *)articles title:(NSString *)title;
 @end
+NS_ASSUME_NONNULL_END
