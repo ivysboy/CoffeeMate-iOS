@@ -31,6 +31,10 @@
     return [UIColor colorWithRed:4/255.0 green:50/255.0 blue:74/255.0 alpha:1.0];
 }
 
++ (UIColor *)darkRedColor {
+    return [UIColor colorWithRed:126/255.0 green:77/255.0 blue:88/255.0 alpha:1.0];
+}
+
 + (UIColor *)coverViewColor {
     return [UIColor colorWithRed:(20)/255.0 green:(20)/255.0 blue:(20)/255.0 alpha:0.2];
 }

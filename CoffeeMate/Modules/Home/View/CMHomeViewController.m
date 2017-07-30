@@ -42,6 +42,8 @@
 
 @property (nonatomic , strong) CMHomeHeaderView *headerView;
 
+@property (nonatomic , strong) UIView *retryView;
+
 @end
 
 @implementation CMHomeViewController
@@ -112,7 +114,7 @@
         UILabel *title = (UILabel *)self.navigationItem.titleView;
         [_headerView configHeaderWith:title.text articleTitle:data.title auther:data.auther brief:data.brief image:data.image articleId:data.articleId];
     } failure:^(NSError *error) {
-        
+        _retryView.hidden = NO;
     }];
 }
 
@@ -126,7 +128,7 @@
         [_pullRefreshHeader endRefreshing];
         
     } failure:^(NSError *error) {
-        
+        _retryView.hidden = NO;
     }];
 }
 
@@ -182,12 +184,48 @@
 
     [self.view addSubview:_tableView];
     
+    _retryView = [[UIView alloc] initWithFrame:CGRectZero];
+    [_retryView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    _retryView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_retryView];
+    
+    UIImageView *networkIssue = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [networkIssue setImage:[UIImage imageNamed:@"network-issue"]];
+    networkIssue.contentMode = UIViewContentModeScaleAspectFit;
+    [networkIssue setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_retryView addSubview:networkIssue];
+    
+    UILabel *retryLable = [[UILabel alloc] initWithFrame:CGRectZero];
+    [retryLable setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_retryView addSubview:retryLable];
+    [retryLable setText:@"网络飞走了，点击重试"];
+    [retryLable setTextColor:[UIColor darkTextColor]];
+    [retryLable setTextAlignment:NSTextAlignmentCenter];
+    [retryLable setFont:[UIFont systemFontOfSize:16]];
+    
+    UIView *coverView = [[UIView alloc] initWithFrame:CGRectZero];
+    [coverView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [_retryView addSubview:coverView];
+    coverView.userInteractionEnabled = YES;
+    [coverView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(reloadRequest)]];
+
+    NSDictionary *retryViews = @{@"label" : retryLable, @"cover" : coverView, @"image": networkIssue};
+    [self.retryView addConstraint:[NSLayoutConstraint constraintWithItem:networkIssue attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.retryView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [self.retryView addConstraint:[NSLayoutConstraint constraintWithItem:networkIssue attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.retryView attribute:NSLayoutAttributeCenterY multiplier:1 constant:-100]];
+    [self.retryView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[image]-15-[label]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:retryViews]];
+    [self.retryView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[cover]|" options:0 metrics:nil views:retryViews]];
+    [self.retryView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[cover]|" options:0 metrics:nil views:retryViews]];
+    
     [self setNeedReresh];
     [self setLoadMore];
     
-    NSDictionary *views = @{@"tableView": _tableView};
+    NSDictionary *views = @{@"tableView": _tableView, @"retryView" : _retryView};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[retryView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[retryView]|" options:0 metrics:nil views:views]];
+    
+    _retryView.hidden = YES;
     
     
     CMHomeHeaderView *header = [[CMHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenSize.width, HEADERHEIGHT)];
@@ -282,4 +320,8 @@
     [self.navigationController pushViewController:content animated:YES];
 }
 
+- (void)reloadRequest {
+    _retryView.hidden = YES;
+    [self beginRefreshing];
+}
 @end

@@ -29,7 +29,7 @@ static NSError * addNetworkReachableFlag(NSError *error , BOOL reachable) {
         _sessionManager = [AFHTTPSessionManager manager];
         _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
         _sessionManager.responseSerializer = [[self class] jsonResponseSerializer];
-        [_sessionManager.requestSerializer setTimeoutInterval:15];
+        [_sessionManager.requestSerializer setTimeoutInterval:15.0];
         
     }
     return self;

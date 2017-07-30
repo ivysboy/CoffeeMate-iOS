@@ -41,6 +41,7 @@
 		06CF84BD1F2DCEE400F959B7 /* ExtendNSLogFunctionlity.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84BC1F2DCEE400F959B7 /* ExtendNSLogFunctionlity.m */; };
 		06CF84C01F2DD81800F959B7 /* CMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84BF1F2DD81800F959B7 /* CMDeviceInfo.m */; };
 		06CF84C31F2E3CB700F959B7 /* CMVideoGroupModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84C21F2E3CB700F959B7 /* CMVideoGroupModule.m */; };
+		06CF84C61F2E588A00F959B7 /* CMRetryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84C51F2E588A00F959B7 /* CMRetryView.m */; };
 		06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */; };
 		06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BE91F241C1400B1DC7F /* CMHomeArticle.m */; };
 		06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D77BED1F241E6700B1DC7F /* CMAPI.m */; };
@@ -136,6 +137,8 @@
 		06CF84BF1F2DD81800F959B7 /* CMDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDeviceInfo.m; sourceTree = "<group>"; };
 		06CF84C11F2E3CB700F959B7 /* CMVideoGroupModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoGroupModule.h; sourceTree = "<group>"; };
 		06CF84C21F2E3CB700F959B7 /* CMVideoGroupModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoGroupModule.m; sourceTree = "<group>"; };
+		06CF84C41F2E588A00F959B7 /* CMRetryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRetryView.h; sourceTree = "<group>"; };
+		06CF84C51F2E588A00F959B7 /* CMRetryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRetryView.m; sourceTree = "<group>"; };
 		06D77BE41F241B8100B1DC7F /* CMHomeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeDataManager.h; sourceTree = "<group>"; };
 		06D77BE51F241B8100B1DC7F /* CMHomeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeDataManager.m; sourceTree = "<group>"; };
 		06D77BE81F241C1400B1DC7F /* CMHomeArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeArticle.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */,
 				060A51831F29D2BF007A4D96 /* CMHomeHeaderView.h */,
 				060A51841F29D2BF007A4D96 /* CMHomeHeaderView.m */,
+				06CF84C41F2E588A00F959B7 /* CMRetryView.h */,
+				06CF84C51F2E588A00F959B7 /* CMRetryView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,7 +564,7 @@
 				TargetAttributes = {
 					06F4AE4F1F0A9CEF00600440 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = G5XEK2D5DX;
+						DevelopmentTeam = 4AD76797A4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -672,6 +677,7 @@
 				060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */,
 				0699E7321F2D608500B111CC /* AC_AVPlayerViewController.m in Sources */,
 				0699E70D1F2D2B0200B111CC /* CMHomeContent.m in Sources */,
+				06CF84C61F2E588A00F959B7 /* CMRetryView.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */,
@@ -796,13 +802,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -813,13 +819,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G5XEK2D5DX;
+				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wuyuan.CoffeeMate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

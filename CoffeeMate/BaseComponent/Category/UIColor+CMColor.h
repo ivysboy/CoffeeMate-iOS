@@ -20,6 +20,8 @@
 
 + (UIColor *)darkBlueColor;
 
++ (UIColor *)darkRedColor;
+
 + (UIColor *)coverViewColor;
 
 @end
