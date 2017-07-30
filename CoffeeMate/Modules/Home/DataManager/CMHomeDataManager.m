@@ -10,6 +10,7 @@
 #import "CMHomeArticle.h"
 #import "CMHomeBanner.h"
 #import "CMHomeContent.h"
+#import "CMDeviceInfo.h"
 
 @implementation CMHomeDataManager
 
@@ -75,6 +76,21 @@
             success(content);
         }
     } fail:^(NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+- (void)postDeviceInfoWith:(NSDictionary *)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure {
+    [self JSONPOST:CMCountDeviceLoginAPI parameters:parameters success:^(id _Nonnull data) {
+        NSError *error;
+        CMDeviceInfo *info = [MTLJSONAdapter modelOfClass:[CMDeviceInfo class] fromJSONDictionary:data error:&error];
+        
+        if(error) {
+            failure(error);
+        } else {
+            success(info);
+        }
+    } failure:^(NSError * _Nonnull error) {
         failure(error);
     }];
 }

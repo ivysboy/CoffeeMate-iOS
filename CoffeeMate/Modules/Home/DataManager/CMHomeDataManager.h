@@ -26,4 +26,8 @@
                                   success:(void (^)(id data))success
                                   failure:(void (^)(NSError *error))failure;
 
+- (void)postDeviceInfoWith:(NSDictionary *)parameters
+                   success:(void (^)(id data))success
+                   failure:(void (^)(NSError *error))failure;
+
 @end

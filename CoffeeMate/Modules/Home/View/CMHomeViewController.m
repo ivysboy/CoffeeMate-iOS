@@ -20,6 +20,7 @@
 #import "CMHomeBanner.h"
 #import "CMHomeContentArticle.h"
 #import "CMHomeContent.h"
+#import "UIDevice+UUID.h"
 
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
 #define HEADERHEIGHT 320
@@ -62,10 +63,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self uploadDeviceInfo];
     [self setupNavigationBar];
     [self setupSubView];
 
     [self beginRefreshing];
+}
+
+- (void)uploadDeviceInfo {
+    NSString *proVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *sysVersion = [NSString stringWithFormat:@"%@ %@" , [[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion]];
+    NSString *terminalVersion = [[UIDevice currentDevice] model];
+    
+    NSDictionary *info = @{@"deviceId" : [[UIDevice currentDevice] UUID],
+                           @"devicePlatform" : terminalVersion,
+                           @"systemVersion" : sysVersion,
+                           @"prodVersion" : proVersion
+                           };
+    [self.dataManager postDeviceInfoWith:info success:^(id data) {
+        NSLog(@"%@", data);
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)setNeedReresh {

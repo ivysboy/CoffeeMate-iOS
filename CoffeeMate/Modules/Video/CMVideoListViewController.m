@@ -131,4 +131,27 @@
     [self presentViewController:ctr animated:YES completion:nil];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    CATransform3D transform;
+    
+    transform = CATransform3DMakeTranslation(0 ,5 ,10);
+    
+    transform = CATransform3DScale(transform, 0.98, 0.98, 1);
+    
+    transform.m34 = -1.0/ 600;
+    
+    cell.layer.shadowColor = [[UIColor whiteColor]CGColor];
+    cell.layer.shadowOffset = CGSizeMake(5, 5);
+    cell.layer.transform = transform;
+    cell.alpha = 0.9;
+    
+    [UIView beginAnimations:@"transform" context:NULL];
+    
+    [UIView setAnimationDuration:0.6];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.alpha = 1;
+    cell.layer.shadowOffset = CGSizeMake(0, 0);
+    [UIView commitAnimations];
+}
+
 @end

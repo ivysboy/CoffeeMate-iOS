@@ -9,7 +9,7 @@
 #ifndef coffeemate_pch
 #define coffeemate_pch
 
-#define RecommendCellHeight ScreenSize.width * 300.0 /375
+#define RecommendCellHeight 300.0
 #define RecommendCellWidth 160
 
 #import "CMAPI.h"
@@ -19,6 +19,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 #import "UIView+WYExtension.h"
+#import "ExtendNSLogFunctionlity.h"
 
 #define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
 

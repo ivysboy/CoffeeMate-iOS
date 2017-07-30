@@ -15,6 +15,14 @@
 
 @implementation CMBasicDataManager
 
+static NSError * addNetworkReachableFlag(NSError *error , BOOL reachable) {
+    
+    NSMutableDictionary *mutableUserInfo = [error.userInfo mutableCopy];
+    mutableUserInfo[@"reachable"] = @(reachable);
+    
+    return [[NSError alloc] initWithDomain:error.domain code:error.code userInfo:mutableUserInfo];
+}
+
 - (instancetype)init {
     self = [super init];
     if(self) {
@@ -70,6 +78,37 @@
     }];
 }
 
+- (void)JSONPOST:(NSString *)URLString
+  parameters:(NSDictionary *)parameters
+     success:(void (^)(id _Nonnull))success
+     failure:(void (^)(NSError * _Nonnull))failure {
+    NSError *error;
+    NSMutableURLRequest *request = [self.sessionManager.requestSerializer requestWithMethod:@"POST" URLString:URLString parameters:nil error:&error];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:[[self toJSONString:parameters] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [[self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        
+        NSLog(@"Response: %@\nresponseData : %@\nrequest: %@\nparameters:%@\n", httpResponse, responseObject, request, parameters);
+        
+        if(error) {
+            if (![[AFNetworkReachabilityManager sharedManager] isReachable]) {
+                error = addNetworkReachableFlag(error, [[AFNetworkReachabilityManager sharedManager] isReachable]);
+            }
+            if(failure) {
+                failure(error);
+            }
+        } else {
+            if(success) {
+                success(responseObject);
+            }
+        }
+    }] resume];
+}
+
 - (void)POST:(NSString *)URLString
         name:(NSString *)name
     fileName:(NSString *)fileName
@@ -98,5 +137,8 @@
 
 }
 
+- (NSString *)toJSONString:(NSDictionary *)dictionary {
+    return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil] encoding:NSUTF8StringEncoding];
+}
 
 @end

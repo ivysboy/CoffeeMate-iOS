@@ -208,8 +208,8 @@
     
     //播放按钮
     self.playButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    [self.playButton setImage:[UIImage imageNamed:@"pauseBtn"] forState:UIControlStateNormal];
-    [self.playButton setImage:[UIImage imageNamed:@"playBtn"] forState:UIControlStateSelected];
+    [self.playButton setImage:[UIImage imageNamed:@"btn_pause"] forState:UIControlStateNormal];
+    [self.playButton setImage:[UIImage imageNamed:@"btn_play"] forState:UIControlStateSelected];
     [self.playButton addTarget:self action:@selector(playOrPauseAction:) forControlEvents:UIControlEventTouchUpInside];
     self.playButton.enabled = NO;
     [self.bottmView addSubview:self.playButton];

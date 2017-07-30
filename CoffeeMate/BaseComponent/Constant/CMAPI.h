@@ -13,3 +13,4 @@ extern NSString * const CMArticleContentAPI;
 extern NSString * const CMHomeBannerAPI;
 extern NSString * const CMHomeContentListAPI;
 extern NSString * const CMVideoListAPI;
+extern NSString * const CMCountDeviceLoginAPI;

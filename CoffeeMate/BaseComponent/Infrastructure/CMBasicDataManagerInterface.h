@@ -29,5 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
         data:(NSData *)uploadData
      success:(void (^)(id _Nonnull))success
      failure:(void (^)(NSError * _Nonnull))failure;
+
+- (void)JSONPOST:(NSString *)URLString
+      parameters:(NSDictionary *)parameters
+         success:(void (^)(id _Nonnull))success
+         failure:(void (^)(NSError * _Nonnull))failure;
 @end
 NS_ASSUME_NONNULL_END
