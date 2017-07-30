@@ -48,7 +48,7 @@
     [self addSubview:_titleImage];
     
     _infoContainer = [self setupInfoContainer];
-    _infoContainer.backgroundColor = [UIColor darkBlueColor];
+    _infoContainer.backgroundColor = [UIColor darkRedColor];
     [self addSubview:_infoContainer];
     
     _tapView = [[UIView alloc] initWithFrame:CGRectZero];

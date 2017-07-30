@@ -59,7 +59,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UITabBar appearance] setBarTintColor:[UIColor darkBlueColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor darkRedColor]];
     self.tabBar.tintColor = [UIColor whiteColor];
     
     [self setupSubViewController:[[CMHomeViewController alloc] init] title:@"Discovery" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
