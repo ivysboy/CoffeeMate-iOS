@@ -12,3 +12,5 @@ NSString * const CMHomeArticlesListAPI = @"http://api.ivysboy.com/coffee-mate/ar
 NSString * const CMArticleContentAPI = @"http://api.ivysboy.com/coffee-mate/articles/getArticleById";
 NSString * const CMHomeBannerAPI = @"http://api.ivysboy.com/coffee-mate/home/banner";
 NSString * const CMHomeContentListAPI = @"http://api.ivysboy.com/coffee-mate/home/contentList";
+
+NSString * const CMVideoListAPI = @"http://api.ivysboy.com/coffee-mate/video/getVideoList";

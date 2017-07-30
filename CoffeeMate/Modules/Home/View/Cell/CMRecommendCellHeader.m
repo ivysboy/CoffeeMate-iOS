@@ -40,14 +40,18 @@
     _more.userInteractionEnabled = YES;
     _more.text = @"more";
     _more.textColor = [UIColor titleGreenColor];
-    _more.font = [UIFont boldSystemFontOfSize:12];
+    _more.font = [UIFont boldSystemFontOfSize:13];
+    _more.textAlignment = NSTextAlignmentCenter;
     [_more addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMore)]];
     [self addSubview:_more];
     
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_title attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:20]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_title attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:10]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_title attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_more attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1 constant:-20]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_more attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+
+    NSDictionary *views = @{@"more" : _more};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[more]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[more(64)]|" options:0 metrics:nil views:views]];
 }
 
 #pragma mark - tap more action

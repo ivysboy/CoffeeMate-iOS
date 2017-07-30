@@ -16,7 +16,7 @@
 }
 
 + (UIColor *)titleGreenColor {
-    return [UIColor colorWithRed:44/255.0 green:248/255.0 blue:151/255.0 alpha:1.0];
+    return [UIColor colorWithRed:36/255.0 green:200/255.0 blue:60/255.0 alpha:1.0];
 }
 
 + (UIColor *)titleBlueColor {
@@ -31,4 +31,7 @@
     return [UIColor colorWithRed:4/255.0 green:50/255.0 blue:74/255.0 alpha:1.0];
 }
 
++ (UIColor *)coverViewColor {
+    return [UIColor colorWithRed:(20)/255.0 green:(20)/255.0 blue:(20)/255.0 alpha:0.2];
+}
 @end

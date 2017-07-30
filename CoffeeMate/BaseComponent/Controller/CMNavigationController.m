@@ -55,7 +55,7 @@
         // 让按钮内部的内容往左偏移10
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+        [button setTitleColor:[UIColor darkBlueColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         
         // 修改导航栏左边的item

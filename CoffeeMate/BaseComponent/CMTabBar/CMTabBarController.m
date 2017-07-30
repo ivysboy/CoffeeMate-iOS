@@ -24,12 +24,12 @@
     // 通过appearance统一设置所有的UITabBarItem的文字属性
     // 后面带有UI_APPEARANCE_SELECTOR的方法，都可以通过appearance对象来统一设置
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:12];
+    attrs[NSForegroundColorAttributeName] = [UIColor lightTextColor];
     
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
-    selectedAttrs[NSForegroundColorAttributeName ] = [UIColor darkGrayColor];
+    selectedAttrs[NSForegroundColorAttributeName ] = [UIColor whiteColor];
     
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
@@ -41,11 +41,15 @@
     viewController.tabBarItem.title = title;
     
     if(!([image isEqualToString:@""] || image == nil)) {
-        viewController.tabBarItem.image = [UIImage imageNamed:image];
+        UIImage *darkImage;
+        darkImage = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        viewController.tabBarItem.image = darkImage;
     }
     
     if(!([selectedImage isEqualToString:@""] || selectedImage == nil)) {
-        viewController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+        UIImage *darkImage;
+        darkImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        viewController.tabBarItem.selectedImage = darkImage;
     }
     
     CMNavigationController *navigationController = [[CMNavigationController alloc] initWithRootViewController:viewController];
@@ -55,13 +59,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UITabBar appearance] setBarTintColor:[UIColor darkBlueColor]];
+    self.tabBar.tintColor = [UIColor whiteColor];
     
-    [self setupSubViewController:[[CMHomeViewController alloc] init] title:@"首页" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupSubViewController:[[CMVideoListViewController alloc] init] title:@"视频" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-    [self setupSubViewController:[[CMDiscoveryViewController alloc] init] title:@"发现" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-    [self setupSubViewController:[[CMUserCenterViewController alloc] init] title:@"我的" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupSubViewController:[[CMHomeViewController alloc] init] title:@"发现" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupSubViewController:[[CMVideoListViewController alloc] init] title:@"视频" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupSubViewController:[[CMUserCenterViewController alloc] init] title:@"我的" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
 }
 
+- (UIButton *)customViewWithImage:(UIImage *)image {
+    UIButton *customView = [UIButton buttonWithType:UIButtonTypeCustom];
+    [customView setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    customView.exclusiveTouch = YES;
+    customView.frame = CGRectMake(0, 0, 44, 44);
+    
+    UIImage *darkImage;
+    darkImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    customView.tintColor = [UIColor darkGrayColor];
+    
+    [customView setImage:darkImage forState:UIControlStateNormal];
+    CGRect frame = customView.frame;
+    frame.size.width = image.size.width;
+    customView.frame = frame;
+    return customView;
+}
 
 @end

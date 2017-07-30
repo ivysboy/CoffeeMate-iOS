@@ -7,16 +7,20 @@
 //
 
 #import "CMHomeHeaderView.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CMHomeHeaderView()
 
 @property (nonatomic , strong) UIView *titleView;
+@property (nonatomic , strong) UILabel *hugeLabel;
 @property (nonatomic , strong) UIImageView *titleImage;
 @property (nonatomic , strong) UIView *infoContainer;
 @property (nonatomic , strong) UILabel *title;
 @property (nonatomic , strong) UILabel *brief;
 @property (nonatomic , strong) UILabel *auther;
+
+@property (nonatomic , strong) UIView *tapView;
+@property (nonatomic , copy) NSString *articleId;
 
 @end
 
@@ -41,23 +45,31 @@
     _titleImage = [[UIImageView alloc] initWithFrame:CGRectZero];
     [_titleImage setTranslatesAutoresizingMaskIntoConstraints:NO];
     _titleImage.contentMode = UIViewContentModeScaleToFill;
-    [_titleImage setImageWithURL:[NSURL URLWithString:@"http://static.ivysboy.com/images/3e811636-e541-4037-b263-58176157e6c2.jpg"]];
     [self addSubview:_titleImage];
     
     _infoContainer = [self setupInfoContainer];
     _infoContainer.backgroundColor = [UIColor darkBlueColor];
     [self addSubview:_infoContainer];
     
+    _tapView = [[UIView alloc] initWithFrame:CGRectZero];
+    [_tapView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    _tapView.userInteractionEnabled = YES;
+    [_tapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHeader)]];
+    [self addSubview:_tapView];
+    
     NSDictionary *views = @{
                             @"titleView" : _titleView,
                             @"titleImage" : _titleImage,
-                            @"infoContainer" : _infoContainer};
+                            @"infoContainer" : _infoContainer,
+                            @"tap" : _tapView};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[titleView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[titleImage]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[titleView(64)][titleImage]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[infoContainer]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-224-[infoContainer]|" options:0 metrics:nil views:views]];
-    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tap]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tap]|" options:0 metrics:nil views:views]];
+
 }
 
 - (UIView *)setupTitleView {
@@ -68,6 +80,7 @@
     titleLable.text = @"Discovery";
     titleLable.font = [UIFont boldSystemFontOfSize:20];
     [titleLable setTranslatesAutoresizingMaskIntoConstraints:NO];
+    _hugeLabel = titleLable;
     [titleView addSubview:titleLable];
     
     UIView *redline = [[UIView alloc] initWithFrame:CGRectZero];
@@ -93,7 +106,7 @@
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
     _title = title;
     [title setTranslatesAutoresizingMaskIntoConstraints:NO];
-    title.font = [UIFont boldSystemFontOfSize:11];
+    title.font = [UIFont boldSystemFontOfSize:12];
     title.textColor = [UIColor whiteColor];
     title.text = @"咖啡基础知识集锦";
     [container addSubview:title];
@@ -101,7 +114,7 @@
     UILabel *auther = [[UILabel alloc] initWithFrame:CGRectZero];
     _auther = auther;
     [auther setTranslatesAutoresizingMaskIntoConstraints:NO];
-    auther.font = [UIFont boldSystemFontOfSize:12];
+    auther.font = [UIFont boldSystemFontOfSize:11];
     auther.textColor = [UIColor whiteColor];
     auther.text = @"李小宝";
     [container addSubview:auther];
@@ -109,7 +122,7 @@
     UILabel *brief = [[UILabel alloc] initWithFrame:CGRectZero];
     _brief = brief;
     [brief setTranslatesAutoresizingMaskIntoConstraints:NO];
-    brief.font = [UIFont boldSystemFontOfSize:12];
+    brief.font = [UIFont boldSystemFontOfSize:13];
     brief.textColor = [UIColor whiteColor];
     brief.text = @"李小宝制作的咖啡基础知识集锦";
     [container addSubview:brief];
@@ -120,16 +133,26 @@
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[title]" options:0 metrics:nil views:views]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[auther]" options:0 metrics:nil views:views]];
     [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[brief]" options:0 metrics:nil views:views]];
-    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[title(10)]-10-[auther(10)]-10-[brief]-|" options:0 metrics:nil views:views]];
+    [container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[title(10)]-15-[auther(10)]-10-[brief]-|" options:0 metrics:nil views:views]];
     
     return container;
 }
 
-- (void)configHeaderWith:(NSString *)title auther:(NSString *)auther brief:(NSString *)brief image:(NSURL *)image {
-    [_titleImage setImageWithURL:image];
-    _title.text = title;
+- (void)configHeaderWith:(NSString *)title articleTitle:(NSString *)articleTitle auther:(NSString *)auther brief:(NSString *)brief image:(NSURL *)image articleId:(NSString *)articleId {
+    
+    _articleId = articleId;
+    _hugeLabel.text = title;
+    [_titleImage sd_setImageWithURL:image];
+    _title.text = articleTitle;
     _auther.text = auther;
     _brief.text = brief;
+}
+
+#pragma mark - tap action
+- (void)tapHeader {
+    if([_delegate respondsToSelector:@selector(tapHeaderWith:)]) {
+        [_delegate tapHeaderWith:_articleId];
+    }
 }
 
 @end

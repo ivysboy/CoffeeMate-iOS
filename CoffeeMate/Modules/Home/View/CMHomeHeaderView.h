@@ -8,11 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMHomeHeaderViewDelegate <NSObject>
+
+@optional
+- (void)tapHeaderWith:(NSString *)articleId;
+
+@end
+
 @interface CMHomeHeaderView : UIView
 
+@property (nonatomic , weak) id<CMHomeHeaderViewDelegate> delegate;
+
 - (void)configHeaderWith:(NSString *)title
+            articleTitle:(NSString *)articleTitle
                   auther:(NSString *)auther
                    brief:(NSString *)brief
-                   image:(NSURL *)image;
+                   image:(NSURL *)image
+               articleId:(NSString *)articleId;
 
 @end

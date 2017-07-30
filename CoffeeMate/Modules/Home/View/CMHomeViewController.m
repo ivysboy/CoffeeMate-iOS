@@ -25,7 +25,7 @@
 #define HEADERHEIGHT 320
 
 @interface CMHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate,
-                                   CMHomeRecommendCellDelegate>
+                                   CMHomeRecommendCellDelegate, CMHomeHeaderViewDelegate>
 
 @property (nonatomic , strong) UITableView *tableView;
 
@@ -89,7 +89,9 @@
 
 - (void)queryHomeBanner {
     [self.dataManager fetchHomeBannerWithParameter:nil success:^(CMHomeBanner *data) {
-        [_headerView configHeaderWith:data.title auther:data.auther brief:data.brief image:data.image];
+
+        UILabel *title = (UILabel *)self.navigationItem.titleView;
+        [_headerView configHeaderWith:title.text articleTitle:data.title auther:data.auther brief:data.brief image:data.image articleId:data.articleId];
     } failure:^(NSError *error) {
         
     }];
@@ -171,6 +173,7 @@
     
     CMHomeHeaderView *header = [[CMHomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenSize.width, HEADERHEIGHT)];
     _headerView = header;
+    _headerView.delegate = self;
     _tableView.tableHeaderView = header;
 }
 
@@ -248,6 +251,13 @@
 
 #pragma mark - CMHomeRecommendCellDelegate
 - (void)handleArticleItemClick:(NSString *)articleId {
+    CMArticleContentViewController *content = [[CMArticleContentViewController alloc] init];
+    content.articleId = articleId;
+    [self.navigationController pushViewController:content animated:YES];
+}
+
+#pragma mark - CMHomeHeaderViewDelegate
+- (void)tapHeaderWith:(NSString *)articleId {
     CMArticleContentViewController *content = [[CMArticleContentViewController alloc] init];
     content.articleId = articleId;
     [self.navigationController pushViewController:content animated:YES];

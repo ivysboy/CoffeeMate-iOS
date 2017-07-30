@@ -83,6 +83,7 @@
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_mainImage attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:_nameLabel attribute:NSLayoutAttributeRight multiplier:1 constant:20]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_likeButton attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_likeButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1 constant:-10]];
+    [_briefLabel alignTop];
     
     self.contentView.layer.borderWidth = 0.5f;
     self.contentView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
@@ -94,7 +95,7 @@
                   name:(NSString *)name
                  title:(NSString *)title
                  brief:(NSString *)brief {
-    [_mainImage setImageWithURL:imageUrl];
+    [_mainImage sd_setImageWithURL:imageUrl];
     [_nameLabel setText:name];
     [_titleLabel setText:title];
     [_briefLabel setText:brief];

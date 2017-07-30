@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMVideoListViewController : UIViewController
+@interface CMVideoListViewController : UITableViewController
 
 @end

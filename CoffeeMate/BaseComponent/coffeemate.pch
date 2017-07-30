@@ -10,13 +10,15 @@
 #define coffeemate_pch
 
 #define RecommendCellHeight ScreenSize.width * 300.0 /375
-#define RecommendCellWidth 180
+#define RecommendCellWidth 160
 
 #import "CMAPI.h"
 #import "CMConstant.h"
 #import "UIColor+CMColor.h"
 #import "UIImage+color.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <Masonry/Masonry.h>
+#import "UIView+WYExtension.h"
 
 #define ScreenSize [UIApplication sharedApplication].keyWindow.bounds.size
 
