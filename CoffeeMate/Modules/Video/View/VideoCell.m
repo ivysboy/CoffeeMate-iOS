@@ -66,24 +66,6 @@
     self.timeLabel.text = _typeAndTime;
 }
 
-- (instancetype)initWithTableView:(UITableView *)tableView
-{
-    VideoCell *cell = [VideoCell cellWithTableView:tableView];
-    
-    return cell;
-}
-
-+ (instancetype)cellWithTableView:(UITableView *)tebleView
-{
-    VideoCell *cell = [tebleView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
-    if(!cell)
-    {
-        cell = [[VideoCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass([self class])];
-    }
-    
-    return cell;
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -121,6 +103,7 @@
     _timeLabel = timeLabel;
     _timeLabel.font = Font_China(12);
     _timeLabel.textColor = [UIColor whiteColor];
+    _timeLabel.hidden = YES;
     [self.coverView addSubview:timeLabel];
     
     NSDictionary *views = @{@"bgView" : _bgView,

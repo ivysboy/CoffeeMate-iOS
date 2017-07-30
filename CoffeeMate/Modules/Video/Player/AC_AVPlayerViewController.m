@@ -59,6 +59,8 @@
 
 @property (strong, nonatomic) NSArray *videoArr;
 
+@property (nonatomic , assign) NSInteger retryCount;
+
 @end
 
 @implementation AC_AVPlayerViewController
@@ -80,6 +82,8 @@
     [self ac_initPlayer];
     
     [self ac_initSubViews];
+    
+    _retryCount = 0;
     
     //播放完成通知
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -270,7 +274,7 @@
     //加载失败
     self.faildView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.faildView];
-    self.faildView.backgroundColor = [UIColor redColor];
+    self.faildView.backgroundColor = [UIColor blackColor];
     self.faildView.hidden = YES;
     
     [self.faildView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -383,6 +387,14 @@
 
 - (void)reloadAction:(UIButton *)button
 {
+    if(++_retryCount > 2) {
+        [self.avPlayer pause];
+        [self.link invalidate];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        return;
+    }
     [self changeCurrentplayerItemWithAC_VideoModel:self.videoModel];
     self.faildView.hidden = YES;
 }

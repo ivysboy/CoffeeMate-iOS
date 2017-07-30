@@ -10,8 +10,11 @@
 
 @interface CMVideoDataManager : CMBasicDataManager
 
-- (void)fetchVideoListWith:(NSDictionary *)parameters
+- (void)fetchMainVideoListWith:(NSDictionary *)parameters
                  success:(void (^)(id data))success
                  failure:(void (^)(NSError *error))failure;
 
+- (void)fetchVideoListWith:(NSDictionary *)parameters
+                       success:(void (^)(id data))success
+                       failure:(void (^)(NSError *error))failure;
 @end

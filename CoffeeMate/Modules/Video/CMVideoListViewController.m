@@ -15,14 +15,17 @@
 #import <AVKit/AVKit.h>
 #import "AC_AVPlayerViewController.h"
 #import "CMVideoModule.h"
+#import "CMVideoGroupModule.h"
 #import "CMVideoDataManager.h"
+#import "CMRecommendCellHeader.h"
 
 #define CellH ScreenSize.width * 0.6
 
-@interface CMVideoListViewController ()
-@property (nonatomic , strong) NSMutableArray *dailyList;
+@interface CMVideoListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic , strong) NSMutableArray <CMVideoGroupModule *> *dailyList;
 @property (nonatomic , strong) CMVideoDataManager *dataManager;
 @property (nonatomic , assign) int page;
+@property (nonatomic , strong) UITableView *tableView;
 @end
 
 @implementation CMVideoListViewController
@@ -47,8 +50,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self addRefresh];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [self.tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:self.tableView];
+    NSDictionary *views = @{@"tableView" : self.tableView};
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
+    [self addRefresh];
+    [self.tableView registerClass:[VideoCell class] forCellReuseIdentifier:NSStringFromClass([VideoCell class])];
+    [self.tableView registerClass:[CMRecommendCellHeader class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([CMRecommendCellHeader class])];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
@@ -72,7 +85,7 @@
 
 - (void)queryVideoList {
     NSDictionary *parameter = @{@"page" : @(_page)};
-    [self.dataManager fetchVideoListWith:parameter success:^(NSArray <CMVideoModule *>*data) {
+    [self.dataManager fetchMainVideoListWith:parameter success:^(NSArray <CMVideoGroupModule *>*data) {
         
         if(_page == 1) {
             [self.dailyList removeAllObjects];
@@ -101,17 +114,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dailyList.count;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dailyList.count;
+    CMVideoGroupModule *videoGroup = self.dailyList[section];
+    NSArray <CMVideoModule *> *videos = videoGroup.videos;
+    return videos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VideoCell *cell = [VideoCell cellWithTableView:tableView];
-    CMVideoModule *video = self.dailyList[indexPath.row];
+    VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([VideoCell class]) forIndexPath:indexPath];
+    CMVideoGroupModule *videoGroup = self.dailyList[indexPath.section];
+    NSArray <CMVideoModule *> *videos = videoGroup.videos;
+    CMVideoModule *video = videos[indexPath.row];
     [cell setVideo:video];
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    CMRecommendCellHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CMRecommendCellHeader class])];
+    
+    CMVideoGroupModule *videoGroup = self.dailyList[section];
+    [header configWith:videoGroup.title more:@"more"];
+    return header;
 }
 
 #pragma mark - header
@@ -121,9 +149,16 @@
     return CellH;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 34;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CMVideoModule *video = self.dailyList[indexPath.row];
+    CMVideoGroupModule *videoGroup = self.dailyList[indexPath.section];
+    NSArray <CMVideoModule *> *videos = videoGroup.videos;
+    CMVideoModule *video = videos[indexPath.row];
+    
     AC_VideoModel *model1 = [[AC_VideoModel alloc] initWithName:video.title url:video.videoUrl];
     
     AC_AVPlayerViewController *ctr = [[AC_AVPlayerViewController alloc] initWithVideoList:@[model1]];

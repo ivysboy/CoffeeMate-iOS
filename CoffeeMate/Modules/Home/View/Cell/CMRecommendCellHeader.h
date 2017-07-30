@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMRecommendCellHeader : UIView
+@interface CMRecommendCellHeader : UITableViewHeaderFooterView
 - (void)configWith:(NSString *)title more:(NSString *)more;
 @end

@@ -11,9 +11,6 @@
 @class CMVideoModule;
 
 @interface VideoCell : UITableViewCell
-
-+ (instancetype)cellWithTableView:(UITableView *)tebleView;
-
 @property (nonatomic , strong) CMVideoModule *video;
 
 @end
