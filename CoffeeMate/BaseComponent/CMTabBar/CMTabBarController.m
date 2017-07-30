@@ -62,9 +62,9 @@
     [[UITabBar appearance] setBarTintColor:[UIColor darkBlueColor]];
     self.tabBar.tintColor = [UIColor whiteColor];
     
-    [self setupSubViewController:[[CMHomeViewController alloc] init] title:@"发现" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupSubViewController:[[CMVideoListViewController alloc] init] title:@"视频" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
-    [self setupSubViewController:[[CMUserCenterViewController alloc] init] title:@"我的" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupSubViewController:[[CMHomeViewController alloc] init] title:@"Discovery" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupSubViewController:[[CMVideoListViewController alloc] init] title:@"Coffee Video" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupSubViewController:[[CMUserCenterViewController alloc] init] title:@"More" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
 }
 

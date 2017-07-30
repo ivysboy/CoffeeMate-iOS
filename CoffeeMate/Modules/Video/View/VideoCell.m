@@ -94,7 +94,7 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     [titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     _titleLabel = titleLabel;
-    _titleLabel.font = Font_China(16);
+    _titleLabel.font = Font_China(20);
     _titleLabel.textColor = [UIColor whiteColor];
     [self.coverView addSubview:titleLabel];
     
