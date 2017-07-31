@@ -18,6 +18,9 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - JCore (1.1.3)
+  - JPush (3.0.5):
+    - JCore (~> 1.1.1)
   - LKDBHelper (2.4.2):
     - FMDB
   - Mantle (2.0.4):
@@ -39,11 +42,14 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - UIImage+ImageWithColor (1.4.0)
+  - WechatOpenSDK (1.7.7)
+  - WeiboSDK (3.2.0)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - FLEX (~> 2.0)
   - FMDB
+  - JPush
   - LKDBHelper
   - Mantle (= 2.0.4)
   - Masonry
@@ -53,11 +59,24 @@ DEPENDENCIES:
   - SDCycleScrollView
   - SDWebImage
   - UIImage+ImageWithColor
+  - WechatOpenSDK
+  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
+
+EXTERNAL SOURCES:
+  WeiboSDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+CHECKOUT OPTIONS:
+  WeiboSDK:
+    :commit: cc559ec82e8e89f955e7ecbd60a7565f8b992d86
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
+  JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
   LKDBHelper: ab67373b32f47463bf5f838d730f225824f4492a
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -67,7 +86,9 @@ SPEC CHECKSUMS:
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UIImage+ImageWithColor: 891401f732f2f332fefe68c2332c6c955c2a879c
+  WechatOpenSDK: cbd332148eb792d444ed4eec94f421d98f2046ee
+  WeiboSDK: a678016504873d4c12c35d156eabd232d19b3d3f
 
-PODFILE CHECKSUM: 9537bec38067bb7ef30c8751ac4efe6a6ca12682
+PODFILE CHECKSUM: 5785be9ea2dbd0ce405a05b38080f246a84493e6
 
 COCOAPODS: 1.2.1
