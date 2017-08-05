@@ -10,3 +10,5 @@
 
 extern NSString * const CMHomeRefreshNotification;
 extern NSString * const CMWXShareCallbackNotification;
+extern NSString * const CMSinaShareCallBackNotification;
+extern NSString * const CMSinaAuthSuccessNotification;

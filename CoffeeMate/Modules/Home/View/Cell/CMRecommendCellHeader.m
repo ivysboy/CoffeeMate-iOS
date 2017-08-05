@@ -47,7 +47,7 @@
     [_more setTranslatesAutoresizingMaskIntoConstraints:NO];
     _more.userInteractionEnabled = YES;
     _more.text = @"more";
-    _more.textColor = [UIColor titleGreenColor];
+    _more.textColor = [UIColor darkBlueColor];
     _more.font = [UIFont boldSystemFontOfSize:13];
     _more.textAlignment = NSTextAlignmentCenter;
     [_more addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMore)]];

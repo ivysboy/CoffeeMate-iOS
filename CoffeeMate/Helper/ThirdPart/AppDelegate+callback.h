@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import <WechatOpenSDK/WXApi.h>
+#import <WeiboSDK/WeiboSDK.h>
 
-@interface AppDelegate (callback)<WXApiDelegate>
+@interface AppDelegate (callback)<WXApiDelegate, WeiboSDKDelegate>
 - (BOOL)handleThirdPartyCallBackWith:(NSURL *)url;
 
 @end

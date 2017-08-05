@@ -61,6 +61,7 @@ static NSString *kShareObjecRetaintKey = @"ShareObjecRetaintKey";
 
 - (void)_addObservers {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_wechatShareCallback:) name:CMWXShareCallbackNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_sinaShareCallback:) name:CMSinaShareCallBackNotification object:nil];
 }
 
 - (void)_wechatShareCallback:(NSNotification *)notification {
@@ -81,6 +82,7 @@ static NSString *kShareObjecRetaintKey = @"ShareObjecRetaintKey";
 
 - (void)_removeObservers {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:CMWXShareCallbackNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CMSinaShareCallBackNotification object:nil];
 }
 
 - (void)dealloc {

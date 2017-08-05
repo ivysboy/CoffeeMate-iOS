@@ -11,7 +11,12 @@
 @implementation AppDelegate (callback)
 
 - (BOOL)handleThirdPartyCallBackWith:(NSURL *)url {
-    return [WXApi handleOpenURL:url delegate:self];
+    if([WXApi handleOpenURL:url delegate:self]) {
+        return YES;
+    } else if([WeiboSDK handleOpenURL:url delegate:self]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)onReq:(BaseReq*)req {
@@ -21,6 +26,32 @@
     if([resp isKindOfClass:[SendMessageToWXResp class]]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:CMWXShareCallbackNotification object:resp];
     }
+}
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+    
+}
+
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+    if (response.statusCode == WeiboSDKResponseStatusCodeSuccess && [response isKindOfClass:[WBAuthorizeResponse class]]){
+        WBAuthorizeResponse *authorizeResponse = (WBAuthorizeResponse *)response;
+        [self handleSinaLogin:authorizeResponse];
+        
+    } else if ([response isKindOfClass:[WBSendMessageToWeiboResponse class]]){
+        [[NSNotificationCenter defaultCenter] postNotificationName:CMSinaShareCallBackNotification object:response];
+    }
+}
+
+- (void)handleSinaLogin:(WBAuthorizeResponse *)response {
+    NSDictionary *authData = @{
+                               @"userId" : response.userID ,
+                               @"accessToken" : response.accessToken,
+                               @"expirationDate" : @([response.expirationDate timeIntervalSinceReferenceDate]),
+                               @"refreshToken" : response.refreshToken
+                               };
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:CMSinaAuthSuccessNotification object:nil userInfo:authData];
 }
 
 @end

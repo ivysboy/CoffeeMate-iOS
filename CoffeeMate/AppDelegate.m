@@ -12,6 +12,7 @@
 #import "AppDelegate+ThirdPart.h"
 #import "AppDelegate+callback.h"
 #import <AFNetworking/AFNetworking.h>
+#import <JPush/JPUSHService.h>
 
 @interface AppDelegate ()
 
@@ -65,5 +66,35 @@
     return [self handleThirdPartyCallBackWith:url];
 }
 
+#pragma mark -- Remote Notification with jpush
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSMutableString *str = [NSMutableString string];
+    for(NSInteger i = 0, n = [deviceToken length]; i < n; i++) {
+        unsigned int b = ((char *)[deviceToken bytes])[i];
+        [str appendFormat:@"%02x", (0xFF & b)];
+    }
+    NSLog(@"token is : %@",str);
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"receive remote notificationd");
+    [JPUSHService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    NSLog(@"receive remote notificationd userinfo :%@" , userInfo);
+    if (userInfo[@"a"]) {
+        [self handleThirdPartyCallBackWith:userInfo[@"a"]];
+    }
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+}
 
 @end

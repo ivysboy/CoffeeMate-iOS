@@ -10,3 +10,5 @@
 
 NSString * const CMHomeRefreshNotification = @"CMHomeRefreshNotification";
 NSString * const CMWXShareCallbackNotification = @"CMWXShareCallbackNotification";
+NSString * const CMSinaShareCallBackNotification = @"CMSinaShareCallBackNotification";
+NSString * const CMSinaAuthSuccessNotification = @"CMSinaAuthSuccessNotification";
