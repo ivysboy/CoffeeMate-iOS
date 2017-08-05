@@ -35,7 +35,7 @@
 }
 
 - (void)setupSubviews {
-    self.backgroundColor = [UIColor viewBackgroundColor];
+    self.contentView.backgroundColor = [UIColor viewBackgroundColor];
     
     _title = [[UILabel alloc] initWithFrame:CGRectZero];
     [_title setTranslatesAutoresizingMaskIntoConstraints:NO];
