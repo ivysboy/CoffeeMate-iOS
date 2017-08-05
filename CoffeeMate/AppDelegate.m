@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "CMTabBarController.h"
 #import <FLEX/FLEXManager.h>
+#import "AppDelegate+ThirdPart.h"
+#import "AppDelegate+callback.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +27,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[CMTabBarController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    [self thirdPartSetup:launchOptions];
     
     return YES;
 }
@@ -48,11 +53,16 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [[FLEXManager sharedManager] showExplorer];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [self handleThirdPartyCallBackWith:url];
 }
 
 

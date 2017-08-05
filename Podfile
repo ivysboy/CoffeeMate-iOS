@@ -18,5 +18,6 @@ pod 'UIImage+ImageWithColor'
 pod 'JPush'
 pod 'WechatOpenSDK'
 pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
+pod 'MBProgressHUD'
 
 end

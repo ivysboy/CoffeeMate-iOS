@@ -36,6 +36,14 @@
 		0699E73B1F2D691600B111CC /* CMVideoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E73A1F2D691600B111CC /* CMVideoModule.m */; };
 		0699E73E1F2D6AF100B111CC /* UIView+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E73D1F2D6AF100B111CC /* UIView+WYExtension.m */; };
 		0699E7441F2D727800B111CC /* CMVideoDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7431F2D727800B111CC /* CMVideoDataManager.m */; };
+		06C0CBD01F363D5E0053D2ED /* AppDelegate+ThirdPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBCF1F363D5E0053D2ED /* AppDelegate+ThirdPart.m */; };
+		06C0CBD31F363EBD0053D2ED /* AppDelegate+callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBD21F363EBD0053D2ED /* AppDelegate+callback.m */; };
+		06C0CBDA1F3642BE0053D2ED /* CMShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBD91F3642BE0053D2ED /* CMShareUtil.m */; };
+		06C0CBDD1F3642EC0053D2ED /* CMShareItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBDC1F3642EC0053D2ED /* CMShareItemCell.m */; };
+		06C0CBE01F3643390053D2ED /* CMShareUtilObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBDF1F3643390053D2ED /* CMShareUtilObject.m */; };
+		06C0CBE31F3643940053D2ED /* CMShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBE21F3643940053D2ED /* CMShareItem.m */; };
+		06C0CBE61F36456C0053D2ED /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBE51F36456C0053D2ED /* UIImage+Common.m */; };
+		06C0CBE71F36459D0053D2ED /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0699E71C1F2D5B7400B111CC /* AssetsLibrary.framework */; };
 		06CF84B91F2DCE4400F959B7 /* CMKeyChainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84B61F2DCE4400F959B7 /* CMKeyChainHelper.m */; };
 		06CF84BA1F2DCE4400F959B7 /* UIDevice+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84B81F2DCE4400F959B7 /* UIDevice+UUID.m */; };
 		06CF84BD1F2DCEE400F959B7 /* ExtendNSLogFunctionlity.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF84BC1F2DCEE400F959B7 /* ExtendNSLogFunctionlity.m */; };
@@ -131,6 +139,20 @@
 		0699E7401F2D6BC900B111CC /* FZLTXIHJW--GB1-0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZLTXIHJW--GB1-0.TTF"; sourceTree = "<group>"; };
 		0699E7421F2D727800B111CC /* CMVideoDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoDataManager.h; sourceTree = "<group>"; };
 		0699E7431F2D727800B111CC /* CMVideoDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoDataManager.m; sourceTree = "<group>"; };
+		06C0CBCE1F363D5E0053D2ED /* AppDelegate+ThirdPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ThirdPart.h"; sourceTree = "<group>"; };
+		06C0CBCF1F363D5E0053D2ED /* AppDelegate+ThirdPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ThirdPart.m"; sourceTree = "<group>"; };
+		06C0CBD11F363EBD0053D2ED /* AppDelegate+callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+callback.h"; sourceTree = "<group>"; };
+		06C0CBD21F363EBD0053D2ED /* AppDelegate+callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+callback.m"; sourceTree = "<group>"; };
+		06C0CBD81F3642BE0053D2ED /* CMShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShareUtil.h; sourceTree = "<group>"; };
+		06C0CBD91F3642BE0053D2ED /* CMShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShareUtil.m; sourceTree = "<group>"; };
+		06C0CBDB1F3642EC0053D2ED /* CMShareItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShareItemCell.h; sourceTree = "<group>"; };
+		06C0CBDC1F3642EC0053D2ED /* CMShareItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShareItemCell.m; sourceTree = "<group>"; };
+		06C0CBDE1F3643390053D2ED /* CMShareUtilObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShareUtilObject.h; sourceTree = "<group>"; };
+		06C0CBDF1F3643390053D2ED /* CMShareUtilObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShareUtilObject.m; sourceTree = "<group>"; };
+		06C0CBE11F3643940053D2ED /* CMShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShareItem.h; sourceTree = "<group>"; };
+		06C0CBE21F3643940053D2ED /* CMShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShareItem.m; sourceTree = "<group>"; };
+		06C0CBE41F36456C0053D2ED /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		06C0CBE51F36456C0053D2ED /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		06CF84B51F2DCE4400F959B7 /* CMKeyChainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMKeyChainHelper.h; sourceTree = "<group>"; };
 		06CF84B61F2DCE4400F959B7 /* CMKeyChainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMKeyChainHelper.m; sourceTree = "<group>"; };
 		06CF84B71F2DCE4400F959B7 /* UIDevice+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UUID.h"; sourceTree = "<group>"; };
@@ -191,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C0CBE71F36459D0053D2ED /* AssetsLibrary.framework in Frameworks */,
 				E1443995109E8B01F7763AF8 /* libPods-CoffeeMate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +259,8 @@
 				060A51751F2993C4007A4D96 /* UILabel+CMLabelAlignment.m */,
 				060A51801F29CBF4007A4D96 /* UIImage+color.h */,
 				060A51811F29CBF4007A4D96 /* UIImage+color.m */,
+				06C0CBE41F36456C0053D2ED /* UIImage+Common.h */,
+				06C0CBE51F36456C0053D2ED /* UIImage+Common.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -326,9 +351,37 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
+		06C0CBCD1F363D4A0053D2ED /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				06C0CBCE1F363D5E0053D2ED /* AppDelegate+ThirdPart.h */,
+				06C0CBCF1F363D5E0053D2ED /* AppDelegate+ThirdPart.m */,
+				06C0CBD11F363EBD0053D2ED /* AppDelegate+callback.h */,
+				06C0CBD21F363EBD0053D2ED /* AppDelegate+callback.m */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		06C0CBD41F3642220053D2ED /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				06C0CBD81F3642BE0053D2ED /* CMShareUtil.h */,
+				06C0CBD91F3642BE0053D2ED /* CMShareUtil.m */,
+				06C0CBDB1F3642EC0053D2ED /* CMShareItemCell.h */,
+				06C0CBDC1F3642EC0053D2ED /* CMShareItemCell.m */,
+				06C0CBDE1F3643390053D2ED /* CMShareUtilObject.h */,
+				06C0CBDF1F3643390053D2ED /* CMShareUtilObject.m */,
+				06C0CBE11F3643940053D2ED /* CMShareItem.h */,
+				06C0CBE21F3643940053D2ED /* CMShareItem.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		06CF84B31F2DCE2E00F959B7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				06C0CBD41F3642220053D2ED /* Share */,
+				06C0CBCD1F363D4A0053D2ED /* ThirdPart */,
 				06CF84B41F2DCE3A00F959B7 /* UUID */,
 			);
 			path = Helper;
@@ -682,7 +735,9 @@
 				06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */,
 				0699E7131F2D32CC00B111CC /* CMNavigationController.m in Sources */,
 				06CF84BA1F2DCE4400F959B7 /* UIDevice+UUID.m in Sources */,
+				06C0CBD01F363D5E0053D2ED /* AppDelegate+ThirdPart.m in Sources */,
 				06CF84D81F30E9BB00F959B7 /* CMUserMainPageCell.m in Sources */,
+				06C0CBDA1F3642BE0053D2ED /* CMShareUtil.m in Sources */,
 				06CF84C01F2DD81800F959B7 /* CMDeviceInfo.m in Sources */,
 				060A516D1F2977BB007A4D96 /* CMHomeRecommendCell.m in Sources */,
 				06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */,
@@ -691,11 +746,15 @@
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
 				0699E7441F2D727800B111CC /* CMVideoDataManager.m in Sources */,
 				06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */,
+				06C0CBE01F3643390053D2ED /* CMShareUtilObject.m in Sources */,
+				06C0CBDD1F3642EC0053D2ED /* CMShareItemCell.m in Sources */,
 				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
 				060A517F1F29BD39007A4D96 /* CMConstant.m in Sources */,
 				060A51851F29D2BF007A4D96 /* CMHomeHeaderView.m in Sources */,
 				06CF84D11F30E15300F959B7 /* CMUserHeaderView.m in Sources */,
+				06C0CBE61F36456C0053D2ED /* UIImage+Common.m in Sources */,
 				0699E7101F2D2B9600B111CC /* CMHomeContentArticle.m in Sources */,
+				06C0CBD31F363EBD0053D2ED /* AppDelegate+callback.m in Sources */,
 				06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */,
 				060A517A1F29AEF4007A4D96 /* CMEdgeInsertLabel.m in Sources */,
 				0699E7371F2D672A00B111CC /* VideoCell.m in Sources */,
@@ -706,6 +765,7 @@
 				060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */,
 				0699E7321F2D608500B111CC /* AC_AVPlayerViewController.m in Sources */,
 				0699E70D1F2D2B0200B111CC /* CMHomeContent.m in Sources */,
+				06C0CBE31F3643940053D2ED /* CMShareItem.m in Sources */,
 				06CF84C61F2E588A00F959B7 /* CMRetryView.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
@@ -835,7 +895,7 @@
 				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
@@ -852,7 +912,7 @@
 				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;

@@ -9,3 +9,4 @@
 #import "CMConstant.h"
 
 NSString * const CMHomeRefreshNotification = @"CMHomeRefreshNotification";
+NSString * const CMWXShareCallbackNotification = @"CMWXShareCallbackNotification";

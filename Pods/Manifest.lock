@@ -27,6 +27,7 @@ PODS:
     - Mantle/extobjc (= 2.0.4)
   - Mantle/extobjc (2.0.4)
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - PINCache (2.3)
   - ReactiveCocoa (2.5):
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - LKDBHelper
   - Mantle (= 2.0.4)
   - Masonry
+  - MBProgressHUD
   - MJRefresh (~> 3.1.0)
   - PINCache
   - ReactiveCocoa (= 2.5)
@@ -80,6 +82,7 @@ SPEC CHECKSUMS:
   LKDBHelper: ab67373b32f47463bf5f838d730f225824f4492a
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
@@ -89,6 +92,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: cbd332148eb792d444ed4eec94f421d98f2046ee
   WeiboSDK: a678016504873d4c12c35d156eabd232d19b3d3f
 
-PODFILE CHECKSUM: 5785be9ea2dbd0ce405a05b38080f246a84493e6
+PODFILE CHECKSUM: 44d779d88ac2282a1ab3acc46ec6d6b6fe825d7d
 
 COCOAPODS: 1.2.1

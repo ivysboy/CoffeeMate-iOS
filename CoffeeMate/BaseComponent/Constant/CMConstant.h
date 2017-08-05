@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString * const CMHomeRefreshNotification;
+extern NSString * const CMWXShareCallbackNotification;

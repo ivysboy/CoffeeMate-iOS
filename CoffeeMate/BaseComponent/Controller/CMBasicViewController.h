@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CMBasicViewController : UIViewController
-
+- (void)showLongToastWith:(NSString *)string;
+- (void)showToastWith:(NSString *)string;
 @end
