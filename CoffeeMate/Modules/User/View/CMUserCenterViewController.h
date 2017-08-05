@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMBasicViewController.h"
 
-@interface CMUserCenterViewController : UIViewController
+@interface CMUserCenterViewController : CMBasicViewController
 
 @end

@@ -9,6 +9,7 @@
 #import "CMUserCenterViewController.h"
 #import "CMUserHeaderView.h"
 #import "CMUserMainPageCell.h"
+#import "CMShareUtilObject.h"
 
 @interface CMUserCenterViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -30,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupSubViews];
-    [_content addObjectsFromArray:@[@"我的收藏", @"意见反馈", @"给个好评鼓励一下！", @"当前版本"]];
+    [_content addObjectsFromArray:@[@"我的收藏", @"意见反馈", @"分享给我的朋友", @"给个好评鼓励一下！", @"当前版本"]];
 }
 
 - (void)setupSubViews {
@@ -69,6 +70,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if(indexPath.row == 2) {
+        
+        NSDictionary *shareDic =  @{@"title" : @"咖啡伴我心", @"desc" : @"专注精品咖啡文化传播", @"url" : @"http://www.ivysboy.com", @"image" :@"http://static.ivysboy.com/images/coffee_mate_theme.png"};
+        CMShareUtilObject *shareUtilObject = [CMShareUtilObject buildShareUtilObjectWith:shareDic];
+        [shareUtilObject shareInViewController:self callBack:NULL];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
