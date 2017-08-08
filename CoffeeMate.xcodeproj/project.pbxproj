@@ -186,6 +186,7 @@
 		06D77BF61F242B6600B1DC7F /* CMHomeArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHomeArticleCell.xib; sourceTree = "<group>"; };
 		06D77BF81F243DE600B1DC7F /* CMArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMArticleContentViewController.h; sourceTree = "<group>"; };
 		06D77BF91F243DE600B1DC7F /* CMArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArticleContentViewController.m; sourceTree = "<group>"; };
+		06DABFAF1F395F5100A217B3 /* CoffeeMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeMate.entitlements; sourceTree = "<group>"; };
 		06F4AE501F0A9CEF00600440 /* CoffeeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4AE541F0A9CEF00600440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4AE561F0A9CEF00600440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -470,6 +471,7 @@
 		06F4AE521F0A9CEF00600440 /* CoffeeMate */ = {
 			isa = PBXGroup;
 			children = (
+				06DABFAF1F395F5100A217B3 /* CoffeeMate.entitlements */,
 				06CF84B31F2DCE2E00F959B7 /* Helper */,
 				06F4AE711F0AA45C00600440 /* Modules */,
 				06F4AE701F0AA45400600440 /* BaseComponent */,
@@ -644,7 +646,12 @@
 					06F4AE4F1F0A9CEF00600440 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 4AD76797A4;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -892,6 +899,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CoffeeMate/CoffeeMate.entitlements;
 				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
@@ -900,6 +908,8 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d34be0bc-578f-48f8-bad0-129a57f81bfc";
+				PROVISIONING_PROFILE_SPECIFIER = "coffee-mate-profile-dev";
 			};
 			name = Debug;
 		};
@@ -909,6 +919,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = CoffeeMate/CoffeeMate.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4AD76797A4;
 				GCC_PREFIX_HEADER = CoffeeMate/BaseComponent/coffeemate.pch;
 				INFOPLIST_FILE = CoffeeMate/Info.plist;
@@ -917,6 +929,8 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6d0bd143-8324-480f-bba1-fa18927c0ae7";
+				PROVISIONING_PROFILE_SPECIFIER = "coffee-mate-profile-adhoc";
 			};
 			name = Release;
 		};
