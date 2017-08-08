@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupSubView];
     [self loadData];
     // Do any additional setup after loading the view from its nib.
 }
@@ -67,8 +66,9 @@
     [_titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     _titleLabel.clipsToBounds = YES;
     _titleLabel.layer.cornerRadius = 10;
-    _titleLabel.backgroundColor = [UIColor viewBackgroundColor];
+    _titleLabel.backgroundColor = [UIColor darkBlueColor];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textColor = [UIColor whiteColor];
     [self.scrollView addSubview:_titleLabel];
     
     NSDictionary *views = @{@"mainImage" : _mainImage, @"content" : _contentView, @"title" : _titleLabel};
@@ -92,6 +92,7 @@
     
     NSDictionary *param = @{@"articleId" : _articleId};
     [self.dataManager fetchArticleWithParameter:param success:^(CMHomeArticle *data) {
+        [self setupSubView];
         [_mainImage setImageWithURL:data.image];
         self.title = data.name;
         _titleLabel.text = data.brief;

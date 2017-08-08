@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b2d060-41d7-4194-b56d-fcc4c5baba4e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMHomeRecommendCell.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMHomeRecommendCell.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMRecommendCellHeader.h" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMRecommendCellHeader.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMRecommendCellHeader.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMRecommendCellHeader.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMMoreVideoListViewController.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMMoreVideoListViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMVideoListViewController.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMVideoListViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMArticleContentViewController.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMArticleContentViewController.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,18 +23,6 @@
             <state relative-caret-position="46">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMMoreVideoListViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMMoreVideoListViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2162">
-              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-              <folding>
-                <element signature="e#144#185#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,14 +64,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMVideoListViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMVideoListViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMVideoListViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
+            <state relative-caret-position="2693">
               <caret line="195" column="18" lean-forward="false" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
               <folding>
                 <element signature="e#140#177#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMArticleContentViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMArticleContentViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="70" column="49" lean-forward="false" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,6 +130,7 @@
         <option value="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMHomeRecommendCell.m" />
         <option value="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/Cell/CMRecommendCellHeader.m" />
         <option value="$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMVideoListViewController.m" />
+        <option value="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMArticleContentViewController.m" />
       </list>
     </option>
   </component>
@@ -206,38 +200,6 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="CoffeeMate" type="1d218c8b:XcodeProjectNode" />
               <item name="CoffeeMate" type="fcab9f18:XcodeViewNode" />
-              <item name="Modules" type="fcab9f18:XcodeViewNode" />
-              <item name="Home" type="fcab9f18:XcodeViewNode" />
-              <item name="View" type="fcab9f18:XcodeViewNode" />
-              <item name="Cell" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CoffeeMate" type="1d218c8b:XcodeProjectNode" />
-              <item name="CoffeeMate" type="fcab9f18:XcodeViewNode" />
-              <item name="Modules" type="fcab9f18:XcodeViewNode" />
-              <item name="Video" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CoffeeMate" type="1d218c8b:XcodeProjectNode" />
-              <item name="CoffeeMate" type="fcab9f18:XcodeViewNode" />
-              <item name="Modules" type="fcab9f18:XcodeViewNode" />
-              <item name="Video" type="fcab9f18:XcodeViewNode" />
-              <item name="DataManager" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CoffeeMate" type="1d218c8b:XcodeProjectNode" />
-              <item name="CoffeeMate" type="fcab9f18:XcodeViewNode" />
-              <item name="Modules" type="fcab9f18:XcodeViewNode" />
-              <item name="Video" type="fcab9f18:XcodeViewNode" />
-              <item name="View" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CoffeeMate" type="1d218c8b:XcodeProjectNode" />
-              <item name="CoffeeMate" type="fcab9f18:XcodeViewNode" />
               <item name="Supporting Files" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
@@ -286,12 +248,12 @@
       <workItem from="1502176012481" duration="934000" />
       <workItem from="1502176960097" duration="1110000" />
       <workItem from="1502178262524" duration="12000" />
-      <workItem from="1502205585291" duration="585000" />
+      <workItem from="1502205585291" duration="814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2641000" />
+    <option name="totallyTimeSpent" value="2870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,11 +688,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Video/View/CMVideoListViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="2693">
           <caret line="195" column="18" lean-forward="false" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
           <folding>
             <element signature="e#140#177#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMArticleContentViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="70" column="49" lean-forward="false" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
