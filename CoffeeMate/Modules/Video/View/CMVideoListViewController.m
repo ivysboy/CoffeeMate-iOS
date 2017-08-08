@@ -135,7 +135,7 @@
     CMRecommendCellHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CMRecommendCellHeader class])];
     header.delegate = self;
     CMVideoGroupModule *videoGroup = self.dailyList[section];
-    [header configWith:videoGroup.title more:@"more"];
+    [header configWith:videoGroup.title more:@"more" groupId:videoGroup.groupId];
     return header;
 }
 
@@ -186,9 +186,17 @@
     [UIView commitAnimations];
 }
 
-- (void)clickForMore {
+#pragma mark -- header delegate
+- (void)clickForMore:(NSString *)groupId {
     CMMoreVideoListViewController *moreViewController = [[CMMoreVideoListViewController alloc] init];
-    moreViewController.groupId = @"321";
+    moreViewController.groupId = groupId;
+    for(CMVideoGroupModule *group in self.dailyList) {
+        if([group.groupId isEqualToString:groupId]) {
+            moreViewController.title = group.title;
+            break;
+        }
+    }
+
     [self.navigationController pushViewController:moreViewController animated:YES];
 }
 

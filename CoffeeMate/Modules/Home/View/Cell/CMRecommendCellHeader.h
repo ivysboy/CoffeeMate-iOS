@@ -11,12 +11,12 @@
 @protocol CMRecommendCellHeaderDelegate <NSObject>
 
 @optional
-- (void)clickForMore;
+- (void)clickForMore:(NSString *)groupId;
 
 @end
 
 @interface CMRecommendCellHeader : UITableViewHeaderFooterView
 
 @property (nonatomic , weak) id<CMRecommendCellHeaderDelegate> delegate;
-- (void)configWith:(NSString *)title more:(NSString *)more;
+- (void)configWith:(NSString *)title more:(NSString *)more groupId:(NSString *)groupId;
 @end

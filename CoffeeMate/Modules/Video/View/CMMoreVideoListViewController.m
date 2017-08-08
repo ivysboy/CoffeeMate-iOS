@@ -10,6 +10,8 @@
 #import "CMVideoModule.h"
 #import "VideoCell.h"
 #import "CMVideoDataManager.h"
+#import "AC_AVPlayerViewController.h"
+
 #define CellH ScreenSize.width * 0.6
 
 @interface CMMoreVideoListViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -91,14 +93,15 @@
     return CellH;
 }
 
-/*
-#pragma mark - Navigation
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    CMVideoModule *video = self.videos[indexPath.row];
+
+    AC_VideoModel *model1 = [[AC_VideoModel alloc] initWithName:video.title url:video.videoUrl];
+
+    AC_AVPlayerViewController *ctr = [[AC_AVPlayerViewController alloc] initWithVideoList:@[model1]];
+
+    [self presentViewController:ctr animated:YES completion:nil];
 }
-*/
 
 @end

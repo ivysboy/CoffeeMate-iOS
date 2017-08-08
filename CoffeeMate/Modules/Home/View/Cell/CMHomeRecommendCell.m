@@ -109,7 +109,7 @@
 }
 
 - (void)configCellWith:(NSArray <CMHomeContentArticle *> *)articles title:(NSString *)title {
-    [_header configWith:title more:@"more"];
+    [_header configWith:title more:@"more" groupId:@""];
     [self.articles removeAllObjects];
     [self.articles addObjectsFromArray: articles];
     [self.collectionView reloadData];

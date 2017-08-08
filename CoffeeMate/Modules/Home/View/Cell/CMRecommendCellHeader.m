@@ -12,6 +12,7 @@
 
 @property (nonatomic , strong) UILabel *title;
 @property (nonatomic , strong) UILabel *more;
+@property (nonatomic , copy) NSString *groupId;
 
 @end
 
@@ -64,14 +65,15 @@
 
 #pragma mark - tap more action
 - (void)tapMore {
-    if([_delegate respondsToSelector:@selector(clickForMore)]) {
-        [_delegate clickForMore];
+    if([_delegate respondsToSelector:@selector(clickForMore:)]) {
+        [_delegate clickForMore:_groupId];
     }
 }
 
-- (void)configWith:(NSString *)title more:(NSString *)more {
+- (void)configWith:(NSString *)title more:(NSString *)more groupId:(NSString *)groupId {
     _title.text = title;
     _more.text = more;
+    _groupId = groupId;
 }
 
 @end
