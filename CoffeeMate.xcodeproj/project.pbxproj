@@ -27,15 +27,17 @@
 		0699E70D1F2D2B0200B111CC /* CMHomeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E70C1F2D2B0200B111CC /* CMHomeContent.m */; };
 		0699E7101F2D2B9600B111CC /* CMHomeContentArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E70F1F2D2B9600B111CC /* CMHomeContentArticle.m */; };
 		0699E7131F2D32CC00B111CC /* CMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7121F2D32CC00B111CC /* CMNavigationController.m */; };
-		0699E7161F2D555100B111CC /* CMVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7151F2D555100B111CC /* CMVideoDetailViewController.m */; };
-		0699E7191F2D572700B111CC /* CMMoviePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7181F2D572700B111CC /* CMMoviePlayer.m */; };
 		0699E7311F2D608500B111CC /* AC_AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E72C1F2D608500B111CC /* AC_AVPlayerView.m */; };
 		0699E7321F2D608500B111CC /* AC_AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E72E1F2D608500B111CC /* AC_AVPlayerViewController.m */; };
 		0699E7331F2D608500B111CC /* AC_ProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7301F2D608500B111CC /* AC_ProgressSlider.m */; };
-		0699E7371F2D672A00B111CC /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7361F2D672A00B111CC /* VideoCell.m */; };
 		0699E73B1F2D691600B111CC /* CMVideoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E73A1F2D691600B111CC /* CMVideoModule.m */; };
 		0699E73E1F2D6AF100B111CC /* UIView+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E73D1F2D6AF100B111CC /* UIView+WYExtension.m */; };
 		0699E7441F2D727800B111CC /* CMVideoDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699E7431F2D727800B111CC /* CMVideoDataManager.m */; };
+		069EE8461F398E7D001FEEA2 /* CMMoreVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069EE83D1F398E7D001FEEA2 /* CMMoreVideoListViewController.m */; };
+		069EE8471F398E7D001FEEA2 /* CMMoviePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 069EE83F1F398E7D001FEEA2 /* CMMoviePlayer.m */; };
+		069EE8481F398E7D001FEEA2 /* CMVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069EE8411F398E7D001FEEA2 /* CMVideoDetailViewController.m */; };
+		069EE8491F398E7D001FEEA2 /* CMVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069EE8431F398E7D001FEEA2 /* CMVideoListViewController.m */; };
+		069EE84A1F398E7D001FEEA2 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 069EE8451F398E7D001FEEA2 /* VideoCell.m */; };
 		06C0CBD01F363D5E0053D2ED /* AppDelegate+ThirdPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBCF1F363D5E0053D2ED /* AppDelegate+ThirdPart.m */; };
 		06C0CBD31F363EBD0053D2ED /* AppDelegate+callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBD21F363EBD0053D2ED /* AppDelegate+callback.m */; };
 		06C0CBDA1F3642BE0053D2ED /* CMShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C0CBD91F3642BE0053D2ED /* CMShareUtil.m */; };
@@ -64,7 +66,6 @@
 		06F4AE551F0A9CEF00600440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE541F0A9CEF00600440 /* main.m */; };
 		06F4AE581F0A9CEF00600440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE571F0A9CEF00600440 /* AppDelegate.m */; };
 		06F4AE601F0A9CEF00600440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */; };
-		06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */; };
 		06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */; };
 		06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE841F0AA51300600440 /* CMTabBarController.m */; };
 		06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE891F0AB5BF00600440 /* CMBasicDataManager.m */; };
@@ -112,10 +113,6 @@
 		0699E70F1F2D2B9600B111CC /* CMHomeContentArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeContentArticle.m; sourceTree = "<group>"; };
 		0699E7111F2D32CC00B111CC /* CMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMNavigationController.h; sourceTree = "<group>"; };
 		0699E7121F2D32CC00B111CC /* CMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMNavigationController.m; sourceTree = "<group>"; };
-		0699E7141F2D555100B111CC /* CMVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoDetailViewController.h; sourceTree = "<group>"; };
-		0699E7151F2D555100B111CC /* CMVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoDetailViewController.m; sourceTree = "<group>"; };
-		0699E7171F2D572700B111CC /* CMMoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMoviePlayer.h; sourceTree = "<group>"; };
-		0699E7181F2D572700B111CC /* CMMoviePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMoviePlayer.m; sourceTree = "<group>"; };
 		0699E71A1F2D579800B111CC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0699E71C1F2D5B7400B111CC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0699E71E1F2D5B8000B111CC /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -130,8 +127,6 @@
 		0699E72E1F2D608500B111CC /* AC_AVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AC_AVPlayerViewController.m; sourceTree = "<group>"; };
 		0699E72F1F2D608500B111CC /* AC_ProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AC_ProgressSlider.h; sourceTree = "<group>"; };
 		0699E7301F2D608500B111CC /* AC_ProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AC_ProgressSlider.m; sourceTree = "<group>"; };
-		0699E7351F2D672A00B111CC /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
-		0699E7361F2D672A00B111CC /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		0699E7391F2D691600B111CC /* CMVideoModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoModule.h; sourceTree = "<group>"; };
 		0699E73A1F2D691600B111CC /* CMVideoModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoModule.m; sourceTree = "<group>"; };
 		0699E73C1F2D6AF100B111CC /* UIView+WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WYExtension.h"; sourceTree = "<group>"; };
@@ -139,6 +134,16 @@
 		0699E7401F2D6BC900B111CC /* FZLTXIHJW--GB1-0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZLTXIHJW--GB1-0.TTF"; sourceTree = "<group>"; };
 		0699E7421F2D727800B111CC /* CMVideoDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoDataManager.h; sourceTree = "<group>"; };
 		0699E7431F2D727800B111CC /* CMVideoDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoDataManager.m; sourceTree = "<group>"; };
+		069EE83C1F398E7D001FEEA2 /* CMMoreVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMoreVideoListViewController.h; sourceTree = "<group>"; };
+		069EE83D1F398E7D001FEEA2 /* CMMoreVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMoreVideoListViewController.m; sourceTree = "<group>"; };
+		069EE83E1F398E7D001FEEA2 /* CMMoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMoviePlayer.h; sourceTree = "<group>"; };
+		069EE83F1F398E7D001FEEA2 /* CMMoviePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMoviePlayer.m; sourceTree = "<group>"; };
+		069EE8401F398E7D001FEEA2 /* CMVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoDetailViewController.h; sourceTree = "<group>"; };
+		069EE8411F398E7D001FEEA2 /* CMVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoDetailViewController.m; sourceTree = "<group>"; };
+		069EE8421F398E7D001FEEA2 /* CMVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoListViewController.h; sourceTree = "<group>"; };
+		069EE8431F398E7D001FEEA2 /* CMVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoListViewController.m; sourceTree = "<group>"; };
+		069EE8441F398E7D001FEEA2 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		069EE8451F398E7D001FEEA2 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		06C0CBCE1F363D5E0053D2ED /* AppDelegate+ThirdPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ThirdPart.h"; sourceTree = "<group>"; };
 		06C0CBCF1F363D5E0053D2ED /* AppDelegate+ThirdPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ThirdPart.m"; sourceTree = "<group>"; };
 		06C0CBD11F363EBD0053D2ED /* AppDelegate+callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+callback.h"; sourceTree = "<group>"; };
@@ -193,8 +198,6 @@
 		06F4AE571F0A9CEF00600440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		06F4AE5F1F0A9CEF00600440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F4AE641F0A9CEF00600440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06F4AE791F0AA4A300600440 /* CMVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoListViewController.h; sourceTree = "<group>"; };
-		06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMVideoListViewController.m; sourceTree = "<group>"; };
 		06F4AE7C1F0AA4B300600440 /* CMDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDiscoveryViewController.h; sourceTree = "<group>"; };
 		06F4AE7D1F0AA4B300600440 /* CMDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDiscoveryViewController.m; sourceTree = "<group>"; };
 		06F4AE831F0AA51300600440 /* CMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTabBarController.h; sourceTree = "<group>"; };
@@ -318,8 +321,16 @@
 		0699E7341F2D671600B111CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0699E7351F2D672A00B111CC /* VideoCell.h */,
-				0699E7361F2D672A00B111CC /* VideoCell.m */,
+				069EE83C1F398E7D001FEEA2 /* CMMoreVideoListViewController.h */,
+				069EE83D1F398E7D001FEEA2 /* CMMoreVideoListViewController.m */,
+				069EE83E1F398E7D001FEEA2 /* CMMoviePlayer.h */,
+				069EE83F1F398E7D001FEEA2 /* CMMoviePlayer.m */,
+				069EE8401F398E7D001FEEA2 /* CMVideoDetailViewController.h */,
+				069EE8411F398E7D001FEEA2 /* CMVideoDetailViewController.m */,
+				069EE8421F398E7D001FEEA2 /* CMVideoListViewController.h */,
+				069EE8431F398E7D001FEEA2 /* CMVideoListViewController.m */,
+				069EE8441F398E7D001FEEA2 /* VideoCell.h */,
+				069EE8451F398E7D001FEEA2 /* VideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,12 +563,6 @@
 				0699E7381F2D68FB00B111CC /* Module */,
 				0699E7341F2D671600B111CC /* View */,
 				0699E72A1F2D608500B111CC /* Player */,
-				06F4AE791F0AA4A300600440 /* CMVideoListViewController.h */,
-				06F4AE7A1F0AA4A300600440 /* CMVideoListViewController.m */,
-				0699E7141F2D555100B111CC /* CMVideoDetailViewController.h */,
-				0699E7151F2D555100B111CC /* CMVideoDetailViewController.m */,
-				0699E7171F2D572700B111CC /* CMMoviePlayer.h */,
-				0699E7181F2D572700B111CC /* CMMoviePlayer.m */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -747,7 +752,6 @@
 				06C0CBDA1F3642BE0053D2ED /* CMShareUtil.m in Sources */,
 				06CF84C01F2DD81800F959B7 /* CMDeviceInfo.m in Sources */,
 				060A516D1F2977BB007A4D96 /* CMHomeRecommendCell.m in Sources */,
-				06F4AE7B1F0AA4A300600440 /* CMVideoListViewController.m in Sources */,
 				06CF84CE1F30E14300F959B7 /* CMUserCenterViewController.m in Sources */,
 				0699E73E1F2D6AF100B111CC /* UIView+WYExtension.m in Sources */,
 				06F4AE7E1F0AA4B300600440 /* CMDiscoveryViewController.m in Sources */,
@@ -758,15 +762,16 @@
 				067C829C1F0D5650002B5B54 /* CMHomeCycleView.m in Sources */,
 				060A517F1F29BD39007A4D96 /* CMConstant.m in Sources */,
 				060A51851F29D2BF007A4D96 /* CMHomeHeaderView.m in Sources */,
+				069EE8491F398E7D001FEEA2 /* CMVideoListViewController.m in Sources */,
 				06CF84D11F30E15300F959B7 /* CMUserHeaderView.m in Sources */,
 				06C0CBE61F36456C0053D2ED /* UIImage+Common.m in Sources */,
 				0699E7101F2D2B9600B111CC /* CMHomeContentArticle.m in Sources */,
 				06C0CBD31F363EBD0053D2ED /* AppDelegate+callback.m in Sources */,
 				06D77BF41F24283900B1DC7F /* CMHomeArticleCell.m in Sources */,
 				060A517A1F29AEF4007A4D96 /* CMEdgeInsertLabel.m in Sources */,
-				0699E7371F2D672A00B111CC /* VideoCell.m in Sources */,
 				067276BE1F0C01C3002212D3 /* CMBasicViewController.m in Sources */,
 				067276C11F0C01E9002212D3 /* CMBasicCollectionViewController.m in Sources */,
+				069EE8481F398E7D001FEEA2 /* CMVideoDetailViewController.m in Sources */,
 				06CF84C31F2E3CB700F959B7 /* CMVideoGroupModule.m in Sources */,
 				06D77BEA1F241C1400B1DC7F /* CMHomeArticle.m in Sources */,
 				060A51821F29CBF4007A4D96 /* UIImage+color.m in Sources */,
@@ -775,6 +780,8 @@
 				06C0CBE31F3643940053D2ED /* CMShareItem.m in Sources */,
 				06CF84C61F2E588A00F959B7 /* CMRetryView.m in Sources */,
 				06D77BFB1F243DE600B1DC7F /* CMArticleContentViewController.m in Sources */,
+				069EE84A1F398E7D001FEEA2 /* VideoCell.m in Sources */,
+				069EE8461F398E7D001FEEA2 /* CMMoreVideoListViewController.m in Sources */,
 				06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */,
 				060A51761F2993C4007A4D96 /* UILabel+CMLabelAlignment.m in Sources */,
 				062C59061F2902F100368FC8 /* UIColor+CMColor.m in Sources */,
@@ -782,19 +789,18 @@
 				06CF84D41F30E60C00F959B7 /* UILabel+util.m in Sources */,
 				067C82991F0D5638002B5B54 /* CMHomeViewController.m in Sources */,
 				06D77BEE1F241E6700B1DC7F /* CMAPI.m in Sources */,
-				0699E7161F2D555100B111CC /* CMVideoDetailViewController.m in Sources */,
 				0699E70A1F2D27E800B111CC /* CMHomeBanner.m in Sources */,
 				060A51731F298A57007A4D96 /* CMRecommendCellHeader.m in Sources */,
 				0699E7331F2D608500B111CC /* AC_ProgressSlider.m in Sources */,
 				060A51701F29784F007A4D96 /* CMRecommendInternalCell.m in Sources */,
 				06CF84BD1F2DCEE400F959B7 /* ExtendNSLogFunctionlity.m in Sources */,
+				069EE8471F398E7D001FEEA2 /* CMMoviePlayer.m in Sources */,
 				06F4AE551F0A9CEF00600440 /* main.m in Sources */,
 				06CF84B91F2DCE4400F959B7 /* CMKeyChainHelper.m in Sources */,
 				0699E7311F2D608500B111CC /* AC_AVPlayerView.m in Sources */,
 				06D77BE61F241B8100B1DC7F /* CMHomeDataManager.m in Sources */,
 				060A517C1F29B008007A4D96 /* Foundation+Log.m in Sources */,
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
-				0699E7191F2D572700B111CC /* CMMoviePlayer.m in Sources */,
 				062C59091F29034400368FC8 /* UIColor+util.m in Sources */,
 				0699E73B1F2D691600B111CC /* CMVideoModule.m in Sources */,
 			);

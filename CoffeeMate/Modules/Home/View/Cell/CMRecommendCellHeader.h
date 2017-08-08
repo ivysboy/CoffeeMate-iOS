@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMRecommendCellHeaderDelegate <NSObject>
+
+@optional
+- (void)clickForMore;
+
+@end
+
 @interface CMRecommendCellHeader : UITableViewHeaderFooterView
+
+@property (nonatomic , weak) id<CMRecommendCellHeaderDelegate> delegate;
 - (void)configWith:(NSString *)title more:(NSString *)more;
 @end

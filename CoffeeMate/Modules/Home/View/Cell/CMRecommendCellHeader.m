@@ -64,7 +64,9 @@
 
 #pragma mark - tap more action
 - (void)tapMore {
-    
+    if([_delegate respondsToSelector:@selector(clickForMore)]) {
+        [_delegate clickForMore];
+    }
 }
 
 - (void)configWith:(NSString *)title more:(NSString *)more {

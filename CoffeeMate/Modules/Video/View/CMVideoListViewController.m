@@ -7,21 +7,18 @@
 //
 
 #import "CMVideoListViewController.h"
-#import "CMVideoDetailViewController.h"
 #import "MJRefresh.h"
 #import "VideoCell.h"
-#import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MediaPlayer.h>
-#import <AVKit/AVKit.h>
 #import "AC_AVPlayerViewController.h"
 #import "CMVideoModule.h"
 #import "CMVideoGroupModule.h"
 #import "CMVideoDataManager.h"
 #import "CMRecommendCellHeader.h"
+#import "CMMoreVideoListViewController.h"
 
 #define CellH ScreenSize.width * 0.6
 
-@interface CMVideoListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface CMVideoListViewController ()<UITableViewDelegate, UITableViewDataSource, CMRecommendCellHeaderDelegate>
 @property (nonatomic , strong) NSMutableArray <CMVideoGroupModule *> *dailyList;
 @property (nonatomic , strong) CMVideoDataManager *dataManager;
 @property (nonatomic , assign) int page;
@@ -136,7 +133,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     CMRecommendCellHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([CMRecommendCellHeader class])];
-    
+    header.delegate = self;
     CMVideoGroupModule *videoGroup = self.dailyList[section];
     [header configWith:videoGroup.title more:@"more"];
     return header;
@@ -187,6 +184,12 @@
     cell.alpha = 1;
     cell.layer.shadowOffset = CGSizeMake(0, 0);
     [UIView commitAnimations];
+}
+
+- (void)clickForMore {
+    CMMoreVideoListViewController *moreViewController = [[CMMoreVideoListViewController alloc] init];
+    moreViewController.groupId = @"321";
+    [self.navigationController pushViewController:moreViewController animated:YES];
 }
 
 @end
