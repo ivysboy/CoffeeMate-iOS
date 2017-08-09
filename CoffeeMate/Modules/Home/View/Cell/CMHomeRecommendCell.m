@@ -11,7 +11,10 @@
 #import "CMRecommendInternalCell.h"
 #import "CMHomeContentArticle.h"
 
-@interface CMHomeRecommendCell()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface CMHomeRecommendCell()<UICollectionViewDelegate,
+                                UICollectionViewDataSource,
+                                UICollectionViewDelegateFlowLayout,
+                                CMRecommendInternalCellDelegate>
 
 @property (nonatomic , strong) UICollectionView *collectionView;
 @property (nonatomic , strong) NSArray *items;
@@ -84,10 +87,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CMRecommendInternalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CMRecommendInternalCell class]) forIndexPath:indexPath];
-
+    cell.delegate = self;
     CMHomeContentArticle *article = self.articles[indexPath.row];
     
-    [cell configCellWith:article.image name:article.title title:article.auther brief:article.brief];
+    [cell configCellWith:article.image name:article.title title:article.auther brief:article.brief articleId:article.articleId];
     
     return cell;
 }
@@ -113,5 +116,11 @@
     [self.articles removeAllObjects];
     [self.articles addObjectsFromArray: articles];
     [self.collectionView reloadData];
+}
+
+- (void)touchCollectButton:(NSString *)articleId {
+    if([_delegate respondsToSelector:@selector(collectActionAtArticle:)]) {
+        [_delegate collectActionAtArticle:articleId];
+    }
 }
 @end

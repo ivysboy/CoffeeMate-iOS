@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 - (void)handleArticleItemClick:(NSString *)articleId;
+- (void)collectActionAtArticle:(NSString *)articleId;
 
 @end
 

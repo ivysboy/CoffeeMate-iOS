@@ -70,6 +70,8 @@
 		06F4AE851F0AA51300600440 /* CMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE841F0AA51300600440 /* CMTabBarController.m */; };
 		06F4AE8A1F0AB5BF00600440 /* CMBasicDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE891F0AB5BF00600440 /* CMBasicDataManager.m */; };
 		06F4AE8D1F0AB69400600440 /* CMJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4AE8C1F0AB69400600440 /* CMJSONResponseSerializer.m */; };
+		B0805A66F5EE29D4F7DE9979 /* CMArticlesCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0805C369485C31088AB6643 /* CMArticlesCollectController.m */; };
+		B0805D5125D8CEE4D83E7ED7 /* CMCollectDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B08053F543D94022151BB115 /* CMCollectDataManager.m */; };
 		E1443995109E8B01F7763AF8 /* libPods-CoffeeMate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3D92CE3309A38A8686112C /* libPods-CoffeeMate.a */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +210,10 @@
 		06F4AE8B1F0AB69400600440 /* CMJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMJSONResponseSerializer.h; sourceTree = "<group>"; };
 		06F4AE8C1F0AB69400600440 /* CMJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMJSONResponseSerializer.m; sourceTree = "<group>"; };
 		6C3D92CE3309A38A8686112C /* libPods-CoffeeMate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeMate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B08053F543D94022151BB115 /* CMCollectDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollectDataManager.m; sourceTree = "<group>"; };
+		B08059431029A02471D901D5 /* CMArticlesCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMArticlesCollectController.h; sourceTree = "<group>"; };
+		B0805C27AE17CE55D86412B3 /* CMCollectDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollectDataManager.h; sourceTree = "<group>"; };
+		B0805C369485C31088AB6643 /* CMArticlesCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArticlesCollectController.m; sourceTree = "<group>"; };
 		C36D84522C4F34B472337D63 /* Pods-CoffeeMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate.release.xcconfig"; sourceTree = "<group>"; };
 		E71348E965821AB9C12B654C /* Pods-CoffeeMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeMate/Pods-CoffeeMate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -525,6 +531,7 @@
 				06F4AE731F0AA45C00600440 /* Home */,
 				06F4AE741F0AA45C00600440 /* User */,
 				06F4AE751F0AA45C00600440 /* Video */,
+				B080502F717227E2066C6707 /* Collection */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -615,6 +622,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B080502F717227E2066C6707 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				B0805FB555F5403FDD793043 /* Controller */,
+				B08054AB464920CF1A1DCBE2 /* DataManager */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		B08054AB464920CF1A1DCBE2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B08053F543D94022151BB115 /* CMCollectDataManager.m */,
+				B0805C27AE17CE55D86412B3 /* CMCollectDataManager.h */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B0805FB555F5403FDD793043 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0805C369485C31088AB6643 /* CMArticlesCollectController.m */,
+				B08059431029A02471D901D5 /* CMArticlesCollectController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -653,6 +687,9 @@
 						DevelopmentTeam = 4AD76797A4;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -803,6 +840,8 @@
 				067276BB1F0C01A5002212D3 /* CMBasicListViewController.m in Sources */,
 				062C59091F29034400368FC8 /* UIColor+util.m in Sources */,
 				0699E73B1F2D691600B111CC /* CMVideoModule.m in Sources */,
+				B0805A66F5EE29D4F7DE9979 /* CMArticlesCollectController.m in Sources */,
+				B0805D5125D8CEE4D83E7ED7 /* CMCollectDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

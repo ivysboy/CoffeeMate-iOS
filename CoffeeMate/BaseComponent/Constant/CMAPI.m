@@ -17,3 +17,5 @@ NSString * const CMVideoListAPI = @"http://api.ivysboy.com/coffee-mate/video/get
 NSString * const CMVideoListByGroupIdAPI = @"http://api.ivysboy.com/coffee-mate/video/getVideoListByGroupId";
 
 NSString * const CMCountDeviceLoginAPI = @"http://api.ivysboy.com/coffee-mate/user/anonymous";
+NSString * const CMCollectActionArticleAPI = @"http://api.ivysboy.com/coffee-mate/articles/collectArticle";
+NSString * const CMGetCollectedArticlesAPI = @"http://api.ivysboy.com/coffee-mate/articles/getUserCollectArticles";

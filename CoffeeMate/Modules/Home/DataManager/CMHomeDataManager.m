@@ -95,4 +95,12 @@
     }];
 }
 
+- (void)collectActionWithParameters:(NSDictionary *)parameters success:(void (^)(id data))success failure:(void (^)(NSError *error))failure {
+    [self JSONPOST:CMCollectActionArticleAPI parameters:parameters success:^(id o) {
+        success(o);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
 @end

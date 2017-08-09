@@ -7,20 +7,17 @@
 //
 
 #import "CMHomeViewController.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
-#import "CMHomeCycleView.h"
 #import "CMHomeDataManager.h"
 #import "CMHomeArticle.h"
-#import "CMHomeArticleCell.h"
 #import "MJRefresh.h"
 #import "CMArticleContentViewController.h"
 #import "CMHomeHeaderView.h"
 
 #import "CMHomeRecommendCell.h"
 #import "CMHomeBanner.h"
-#import "CMHomeContentArticle.h"
 #import "CMHomeContent.h"
 #import "UIDevice+UUID.h"
+#import "CMArticlesCollectController.h"
 
 #define CYCLEVIEWHEIGHT [UIScreen mainScreen].bounds.size.width / 375 * 172
 #define HEADERHEIGHT 320
@@ -311,6 +308,22 @@
     CMArticleContentViewController *content = [[CMArticleContentViewController alloc] init];
     content.articleId = articleId;
     [self.navigationController pushViewController:content animated:YES];
+}
+
+- (void)collectActionAtArticle:(NSString *)articleId {
+    NSDictionary *paras = @{@"articleId" : articleId,
+                            @"userId" : [[UIDevice currentDevice] UUID],
+                            @"operation" : @1};
+    [self.dataManager collectActionWithParameters:paras success:^(id data) {
+        [self showToastWith:@"收藏成功"];
+    } failure:^(NSError *error) {
+        [self showToastWith:@"收藏失败"];
+    }];
+
+    NSLog(@"collection of articleId");
+    CMArticlesCollectController *collectionController = [[CMArticlesCollectController alloc] init];
+    collectionController.title = @"hshs";
+    [self.navigationController pushViewController:collectionController animated:YES];
 }
 
 #pragma mark - CMHomeHeaderViewDelegate

@@ -21,6 +21,10 @@
 
 @property (nonatomic , strong) UIButton *likeButton;
 
+@property (nonatomic , copy) NSString *articleId;
+
+@property (nonatomic , assign) BOOL isCollected;
+
 @end
 
 @implementation CMRecommendInternalCell
@@ -63,10 +67,13 @@
     _briefLabel.textColor = [UIColor darkTextColor];
     [self.contentView addSubview:_briefLabel];
     
-    _likeButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    _likeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_likeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:_likeButton];
-    
+    [_likeButton setBackgroundImage:[UIImage imageNamed:@"btn_add"] forState:UIControlStateNormal];
+    [_likeButton setBackgroundImage:[UIImage imageNamed:@"good-selected"] forState:UIControlStateSelected];
+    [_likeButton addTarget:self action:@selector(touchLikeButton) forControlEvents:UIControlEventTouchUpInside];
+
     NSDictionary *views = @{@"image" : _mainImage,
                             @"name" : _nameLabel,
                             @"title" : _titleLabel,
@@ -83,6 +90,9 @@
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_mainImage attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:_nameLabel attribute:NSLayoutAttributeRight multiplier:1 constant:20]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_likeButton attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_likeButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1 constant:-10]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[like(20)]" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[like(20)]" options:0 metrics:nil views:views]];
+
     [_briefLabel alignTop];
     
     self.contentView.layer.borderWidth = 0.5f;
@@ -94,12 +104,20 @@
 - (void)configCellWith:(NSURL *)imageUrl
                   name:(NSString *)name
                  title:(NSString *)title
-                 brief:(NSString *)brief {
+                 brief:(NSString *)brief
+             articleId:(NSString *)articleId {
     [_mainImage sd_setImageWithURL:imageUrl];
     [_nameLabel setText:name];
     [_titleLabel setText:title];
     [_briefLabel setText:brief];
     [_briefLabel alignTop];
+    _articleId = articleId;
+}
+
+- (void)touchLikeButton {
+    if([_delegate respondsToSelector:@selector(touchCollectButton:)]) {
+        [_delegate touchCollectButton:_articleId];
+    }
 }
 
 @end

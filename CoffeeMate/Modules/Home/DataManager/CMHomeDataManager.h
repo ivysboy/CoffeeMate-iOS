@@ -30,4 +30,7 @@
                    success:(void (^)(id data))success
                    failure:(void (^)(NSError *error))failure;
 
+- (void)collectActionWithParameters:(NSDictionary *)parameters
+                            success:(void (^)(id data))success
+                            failure:(void (^)(NSError *error))failure;
 @end

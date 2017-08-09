@@ -8,11 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CMRecommendInternalCellDelegate <NSObject>
+
+@optional
+- (void)touchCollectButton:(NSString *)articleId;
+
+@end
+
 @interface CMRecommendInternalCell : UICollectionViewCell
+
+@property (nonatomic , weak) id<CMRecommendInternalCellDelegate> delegate;
 
 - (void)configCellWith:(NSURL *)imageUrl
                   name:(NSString *)name
                  title:(NSString *)title
-                 brief:(NSString *)brief;
+                 brief:(NSString *)brief
+             articleId:(NSString *)articleId;
 
 @end

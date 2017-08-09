@@ -15,3 +15,5 @@ extern NSString * const CMHomeContentListAPI;
 extern NSString * const CMVideoListAPI;
 extern NSString * const CMCountDeviceLoginAPI;
 extern NSString * const CMVideoListByGroupIdAPI;
+extern NSString * const CMCollectActionArticleAPI;
+extern NSString * const CMGetCollectedArticlesAPI;
