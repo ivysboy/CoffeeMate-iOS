@@ -953,8 +953,8 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d34be0bc-578f-48f8-bad0-129a57f81bfc";
-				PROVISIONING_PROFILE_SPECIFIER = "coffee-mate-profile-dev";
+				PROVISIONING_PROFILE = "5a6d2359-aa3f-459a-a798-3cb21e9a0203";
+				PROVISIONING_PROFILE_SPECIFIER = dev;
 			};
 			name = Debug;
 		};
@@ -974,8 +974,8 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xuwuyuan.CoffeeMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d0bd143-8324-480f-bba1-fa18927c0ae7";
-				PROVISIONING_PROFILE_SPECIFIER = "coffee-mate-profile-adhoc";
+				PROVISIONING_PROFILE = "a0825858-cf34-41dc-9b95-67d232de31e8";
+				PROVISIONING_PROFILE_SPECIFIER = dist;
 			};
 			name = Release;
 		};
