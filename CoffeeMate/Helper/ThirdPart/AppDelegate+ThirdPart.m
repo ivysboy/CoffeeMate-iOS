@@ -46,13 +46,15 @@ static NSString *kJPushAppKey = @"f9e0b3b422f675e0f176d2fe";
                                           categories:nil];
     
     BOOL product = YES;
+    NSString *channel = @"AppStore";
 #ifdef DEBUG
     product = NO;
+    channel = @"Debug";
 #endif
     
     [JPUSHService setupWithOption:option
                            appKey:kJPushAppKey
-                          channel:@"AppStore"
+                          channel:channel
                  apsForProduction:product];
     
     

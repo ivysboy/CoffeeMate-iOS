@@ -319,11 +319,6 @@
     } failure:^(NSError *error) {
         [self showToastWith:@"收藏失败"];
     }];
-
-//    NSLog(@"collection of articleId");
-//    CMArticlesCollectController *collectionController = [[CMArticlesCollectController alloc] init];
-//    collectionController.title = @"hshs";
-//    [self.navigationController pushViewController:collectionController animated:YES];
 }
 
 #pragma mark - CMHomeHeaderViewDelegate

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f5b2d060-41d7-4194-b56d-fcc4c5baba4e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Helper/ThirdPart/AppDelegate+ThirdPart.m" afterPath="$PROJECT_DIR$/CoffeeMate/Helper/ThirdPart/AppDelegate+ThirdPart.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMHomeViewController.m" afterPath="$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMHomeViewController.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +44,7 @@
       <file leaf-file-name="CMHomeDataManager.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/DataManager/CMHomeDataManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2231">
+            <state relative-caret-position="2323">
               <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
@@ -113,8 +114,8 @@
       <file leaf-file-name="CMHomeViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMHomeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="322" column="0" lean-forward="false" selection-start-line="322" selection-start-column="2" selection-end-line="325" selection-end-column="87" />
+            <state relative-caret-position="370">
+              <caret line="320" column="7" lean-forward="false" selection-start-line="320" selection-start-column="7" selection-end-line="320" selection-end-column="7" />
               <folding>
                 <element signature="e#135#167#0" expanded="true" />
               </folding>
@@ -163,10 +164,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="987" />
+    <option name="width" value="1440" />
+    <option name="height" value="801" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -186,6 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,7 +278,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,11 +327,13 @@
       <workItem from="1502205585291" duration="2695000" />
       <workItem from="1502257594945" duration="4086000" />
       <workItem from="1502297491493" duration="192000" />
+      <workItem from="1502329729711" duration="197000" />
+      <workItem from="1502376552437" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9029000" />
+    <option name="totallyTimeSpent" value="9250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,11 +345,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="815" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22198732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2966878" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -354,8 +357,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3396861" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55833334" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32222223" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55807364" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32152975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -775,7 +778,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/DataManager/CMHomeDataManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2231">
+        <state relative-caret-position="2323">
           <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
         </state>
@@ -783,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CoffeeMate/Modules/Home/View/CMHomeViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="322" column="0" lean-forward="false" selection-start-line="322" selection-start-column="2" selection-end-line="325" selection-end-column="87" />
+        <state relative-caret-position="370">
+          <caret line="320" column="7" lean-forward="false" selection-start-line="320" selection-start-column="7" selection-end-line="320" selection-end-column="7" />
           <folding>
             <element signature="e#135#167#0" expanded="true" />
           </folding>
