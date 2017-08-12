@@ -18,19 +18,17 @@
 - (void)fetchArticlesListWithParameters:(NSDictionary *)parameters
                   success:(void (^)(id data))success
                   failure:(void (^)(NSError *error))failure {
-    [self GET:CMHomeArticlesListAPI parameters:parameters success:^(id  _Nonnull data) {
+    [self JSONPOST:CMHomeArticlesListAPI parameters:parameters success:^(id o) {
         NSError *error;
-        NSArray<CMHomeArticle *> *articles = [MTLJSONAdapter modelsOfClass:[CMHomeArticle class] fromJSONArray:data error:&error];
-        
+        NSArray<CMHomeArticle *> *articles = [MTLJSONAdapter modelsOfClass:[CMHomeArticle class] fromJSONArray:o error:&error];
+
         if(error) {
             failure(error);
         } else {
             success(articles);
         }
-        
-    } fail:^(NSError * _Nonnull error) {
-       failure(error);
-    
+    } failure:^(NSError *error) {
+        failure(error);
     }];
 }
 
