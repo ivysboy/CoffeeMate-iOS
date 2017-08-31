@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupSubView];
     [self loadData];
     // Do any additional setup after loading the view from its nib.
 }
@@ -92,7 +93,6 @@
     
     NSDictionary *param = @{@"articleId" : _articleId};
     [self.dataManager fetchArticleWithParameter:param success:^(CMHomeArticle *data) {
-        [self setupSubView];
         [_mainImage setImageWithURL:data.image];
         self.title = data.name;
         _titleLabel.text = data.brief;
